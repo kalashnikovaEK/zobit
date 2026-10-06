@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "scope": "jsdom DOM + real HTTP/physics/guards + mock Ollama/Plotly",
+  "cases": [
+    "asset loading",
+    "time/depth cut",
+    "server-bound review",
+    "Qwen3 chat",
+    "all-variable optimization",
+    "candidate switching",
+    "shared comparison range",
+    "stale manual response"
+  ],
+  "plotCalls": 46,
+  "jsErrors": []
+}

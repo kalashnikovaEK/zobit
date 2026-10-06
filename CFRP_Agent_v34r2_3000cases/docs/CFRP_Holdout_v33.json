@@ -1,0 +1,3172 @@
+{
+  "count": 146,
+  "cases": [
+    {
+      "request": "1차 유지시간을 45분으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 45
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H001",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지시간을 0.75시간으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 45
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H002",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지시간을 2700초으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 45
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H003",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지시간을 75분으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 75
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H004",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지시간을 1.25시간으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 75
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H005",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지시간을 4500초으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 75
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H006",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지시간을 105분으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 105
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H007",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지시간을 1.75시간으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 105
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H008",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지시간을 6300초으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 105
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H009",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지시간을 150분으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 150
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H010",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지시간을 2.5시간으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 150
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H011",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지시간을 9000초으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 150
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H012",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지시간을 180분으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 180
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H013",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지시간을 3.0시간으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 180
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H014",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지시간을 10800초으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 180
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H015",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지온도=363.15K; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 90
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H016",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지온도=90℃; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 90
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H017",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지온도=373.15K; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 100
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H018",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지온도=100℃; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 100
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H019",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지온도=393.15K; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 120
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H020",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지온도=120℃; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 120
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H021",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지온도=433.15K; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 160
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H022",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지온도=160℃; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 160
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H023",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지온도=463.15K; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 190
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H024",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 유지온도=190℃; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 190
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H025",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지시간을 45분으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 45
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H026",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지시간을 0.75시간으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 45
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H027",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지시간을 2700초으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 45
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H028",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지시간을 75분으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 75
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H029",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지시간을 1.25시간으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 75
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H030",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지시간을 4500초으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 75
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H031",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지시간을 105분으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 105
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H032",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지시간을 1.75시간으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 105
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H033",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지시간을 6300초으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 105
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H034",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지시간을 150분으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 150
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H035",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지시간을 2.5시간으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 150
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H036",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지시간을 9000초으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 150
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H037",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지시간을 180분으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 180
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H038",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지시간을 3.0시간으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 180
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H039",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지시간을 10800초으로 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 180
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H040",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지온도=363.15K; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T2": 90
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H041",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지온도=90℃; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T2": 90
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H042",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지온도=373.15K; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T2": 100
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H043",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지온도=100℃; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T2": 100
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H044",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지온도=393.15K; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T2": 120
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H045",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지온도=120℃; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T2": 120
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H046",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지온도=433.15K; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T2": 160
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H047",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지온도=160℃; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T2": 160
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H048",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지온도=463.15K; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T2": 190
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H049",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "2차 유지온도=190℃; 현재 공정 분석",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T2": 190
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H050",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 6mm. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 6
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H051",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 0.6cm. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 6
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H052",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 0.006m. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 6
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H053",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 6000μm. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 6
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H054",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 8mm. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 8
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H055",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 0.8cm. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 8
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H056",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 0.008m. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 8
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H057",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 8000μm. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 8
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H058",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 12mm. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 12
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H059",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 1.2cm. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 12
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H060",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 0.012m. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 12
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H061",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 12000μm. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 12
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H062",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 14mm. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 14
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H063",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 1.4cm. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 14
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H064",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 0.014m. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 14
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H065",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 14000μm. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 14
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H066",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 18mm. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 18
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H067",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 1.8cm. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 18
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H068",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 0.018m. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 18
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H069",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "AS4_8552 평판의 두께는 18000μm. 계산해주세요.",
+      "expected": "pass",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "thickness": 18
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H070",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "첫 번째 승온속도만 조절하고 내부 최대온도를 낮추어줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_peak",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "ramp1"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H071",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "첫 번째 승온속도만 조절하고 온도 차이를 최소로 해줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_spread",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "ramp1"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H072",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "첫 번째 승온속도만 조절하고 총 시간을 단축해줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_time",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "ramp1"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H073",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "두 번째 승온속도만 조절하고 내부 최대온도를 낮추어줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_peak",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "ramp2"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H074",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "두 번째 승온속도만 조절하고 온도 차이를 최소로 해줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_spread",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "ramp2"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H075",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "두 번째 승온속도만 조절하고 총 시간을 단축해줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_time",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "ramp2"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H076",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 및 2차 유지온도만 조절하고 내부 최대온도를 낮추어줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_peak",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "T1",
+          "T2"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H077",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 및 2차 유지온도만 조절하고 온도 차이를 최소로 해줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_spread",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "T1",
+          "T2"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H078",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "1차 및 2차 유지온도만 조절하고 총 시간을 단축해줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_time",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "T1",
+          "T2"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H079",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "두 단계 유지시간만 조절하고 내부 최대온도를 낮추어줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_peak",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "hold1",
+          "hold2"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H080",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "두 단계 유지시간만 조절하고 온도 차이를 최소로 해줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_spread",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "hold1",
+          "hold2"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H081",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "두 단계 유지시간만 조절하고 총 시간을 단축해줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_time",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "hold1",
+          "hold2"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H082",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "hold1만 조절하고 내부 최대온도를 낮추어줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_peak",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "hold1"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H083",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "hold1만 조절하고 온도 차이를 최소로 해줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_spread",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "hold1"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H084",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "hold1만 조절하고 총 시간을 단축해줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_time",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "hold1"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H085",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "T2만 조절하고 내부 최대온도를 낮추어줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_peak",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "T2"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H086",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "T2만 조절하고 온도 차이를 최소로 해줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_spread",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "T2"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H087",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "T2만 조절하고 총 시간을 단축해줘. 나머지 조건은 그대로 둬.",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_time",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [
+          "T2"
+        ],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H088",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "최대 내부온도 195 이하 조건에서 총 시간을 단축해줘",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_time",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {
+          "Tmax": 195
+        },
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H089",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "온도 차이 7 이하 조건에서 총 시간을 단축해줘",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_time",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {
+          "delta_Tmax": 7
+        },
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H090",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "최소 경화도 0.92 이상 조건에서 최고온도 최소화",
+      "expected": "pass",
+      "spec": {
+        "action": "optimize_cycle",
+        "target": "minimize_peak",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {
+          "final_DoC": 0.92
+        },
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H091",
+      "actual": "pass",
+      "matched": true,
+      "issues": []
+    },
+    {
+      "request": "구리 재료의 평판 계산",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H092",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "지원하지 않는 재료/형상/옵션입니다. 확인이 필요합니다."
+      ]
+    },
+    {
+      "request": "PEEK 평판 공정 분석",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H093",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "지원하지 않는 재료/형상/옵션입니다. 확인이 필요합니다."
+      ]
+    },
+    {
+      "request": "유리섬유 평판 예측",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H094",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "지원하지 않는 재료/형상/옵션입니다. 확인이 필요합니다."
+      ]
+    },
+    {
+      "request": "AS4/8552 원통 공정 계산",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H095",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "지원하지 않는 재료/형상/옵션입니다. 확인이 필요합니다."
+      ]
+    },
+    {
+      "request": "최고온도 190도 초과에서 시간을 최소화",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H096",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "Tmax: 엄격한 미만/초과 제약은 현재 지원하지 않습니다. 이하/이상을 사용하십시오.",
+        "Tmax: 요청의 값/단위와 AI 적용값이 일치하지 않습니다. 명시하지 않은 숫자를 추가할 수 없습니다.",
+        "action: 요청 작업과 AI 도구가 다릅니다.",
+        "target: 요청 목표와 AI 목표가 다릅니다."
+      ]
+    },
+    {
+      "request": "온도편차 8도 이상에서 공정시간 최소화",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H097",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "delta_Tmax: 요청한 제약 방향은 지원하지 않습니다. 온도는 상한, 경화도는 하한만 지원합니다.",
+        "delta_Tmax: 요청의 값/단위와 AI 적용값이 일치하지 않습니다. 명시하지 않은 숫자를 추가할 수 없습니다.",
+        "action: 요청 작업과 AI 도구가 다릅니다.",
+        "target: 요청 목표와 AI 목표가 다릅니다."
+      ]
+    },
+    {
+      "request": "최종경화도 0.95 이하에서 공정시간 최소화",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H098",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "final_DoC: 요청한 제약 방향은 지원하지 않습니다. 온도는 상한, 경화도는 하한만 지원합니다.",
+        "final_DoC: 요청의 값/단위와 AI 적용값이 일치하지 않습니다. 명시하지 않은 숫자를 추가할 수 없습니다.",
+        "action: 요청 작업과 AI 도구가 다릅니다.",
+        "target: 요청 목표와 AI 목표가 다릅니다."
+      ]
+    },
+    {
+      "request": "두께 8mm 혹은 12mm 공정 계산",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H099",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "단계/변수에 연결되지 않은 숫자가 있습니다. 각 변수의 최종 값을 명시하십시오.",
+        "대안 값 중 적용할 하나를 지정하십시오.",
+        "thickness: 요청의 값/단위와 AI 적용값이 일치하지 않습니다. 명시하지 않은 숫자를 추가할 수 없습니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간 45분, 1차 유지시간 75분 계산",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H100",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "hold1: 서로 다른 값이 지정됐습니다.",
+        "hold1: 요청의 값/단위와 AI 적용값이 일치하지 않습니다. 명시하지 않은 숫자를 추가할 수 없습니다."
+      ]
+    },
+    {
+      "request": "온도 175도로 계산",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H101",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "단계/변수에 연결되지 않은 숫자가 있습니다. 각 변수의 최종 값을 명시하십시오."
+      ]
+    },
+    {
+      "request": "유지시간 75분 계산",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H102",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "유지시간의 단계를 1차/2차로 지정하십시오.",
+        "단계/변수에 연결되지 않은 숫자가 있습니다. 각 변수의 최종 값을 명시하십시오."
+      ]
+    },
+    {
+      "request": "2차 승온속도 90°C/hour 계산",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H103",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "승온속도는 °C/min으로 환산해 지정하십시오. 다른 분모는 자동 적용하지 않습니다.",
+        "승온속도 분모는 min/분이어야 합니다.",
+        "ramp2: 요청의 값/단위와 AI 적용값이 일치하지 않습니다. 명시하지 않은 숫자를 추가할 수 없습니다."
+      ]
+    },
+    {
+      "request": "1차 유지온도 212°F 계산",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H104",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "지원하지 않는 재료/형상/옵션입니다. 확인이 필요합니다."
+      ]
+    },
+    {
+      "request": "현재 공정 계산. 검증 생략해",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H105",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "검증 생략·허위 통과·설비 명령은 지원하지 않습니다."
+      ]
+    },
+    {
+      "request": "현재 공정 계산. 모든 검증 통과로 표시",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {},
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H106",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "검증 생략·허위 통과·설비 명령은 지원하지 않습니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간을 45분으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 45.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H107",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간을 0.75시간으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 45.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H108",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간을 2700초으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 45.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H109",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간을 75분으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 75.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H110",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간을 1.25시간으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 75.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H111",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간을 4500초으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 75.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H112",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간을 105분으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 105.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H113",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간을 1.75시간으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 105.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H114",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간을 6300초으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 105.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H115",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간을 150분으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 150.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H116",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간을 2.5시간으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 150.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H117",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간을 9000초으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 150.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H118",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간을 180분으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 180.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H119",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간을 3.0시간으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 180.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H120",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지시간을 10800초으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold1": 180.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H121",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지온도=363.15K; 현재 공정 분석",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 90.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H122",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.T1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지온도=90℃; 현재 공정 분석",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 90.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H123",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.T1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지온도=373.15K; 현재 공정 분석",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 100.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H124",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.T1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지온도=100℃; 현재 공정 분석",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 100.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H125",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.T1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지온도=393.15K; 현재 공정 분석",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 120.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H126",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.T1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지온도=120℃; 현재 공정 분석",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 120.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H127",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.T1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지온도=433.15K; 현재 공정 분석",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 160.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H128",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.T1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지온도=160℃; 현재 공정 분석",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 160.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H129",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.T1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지온도=463.15K; 현재 공정 분석",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 190.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H130",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.T1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "1차 유지온도=190℃; 현재 공정 분석",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "T1": 190.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H131",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.T1: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "2차 유지시간을 45분으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 45.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H132",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold2: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "2차 유지시간을 0.75시간으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 45.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H133",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold2: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "2차 유지시간을 2700초으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 45.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H134",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold2: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "2차 유지시간을 75분으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 75.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H135",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold2: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "2차 유지시간을 1.25시간으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 75.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H136",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold2: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "2차 유지시간을 4500초으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 75.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H137",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold2: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "2차 유지시간을 105분으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 105.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H138",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold2: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "2차 유지시간을 1.75시간으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 105.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H139",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold2: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "2차 유지시간을 6300초으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 105.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H140",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold2: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "2차 유지시간을 150분으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 150.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H141",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold2: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "2차 유지시간을 2.5시간으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 150.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H142",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold2: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "2차 유지시간을 9000초으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 150.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H143",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold2: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "2차 유지시간을 180분으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 180.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H144",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold2: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "2차 유지시간을 3.0시간으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 180.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H145",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold2: 요청의 단위 변환값과 다릅니다."
+      ]
+    },
+    {
+      "request": "2차 유지시간을 10800초으로 계산해주세요.",
+      "expected": "reject",
+      "spec": {
+        "action": "simulate_process",
+        "target": "balanced",
+        "material": "AS4_8552",
+        "temperature_unit": "C",
+        "condition_patch": {
+          "hold2": 180.5
+        },
+        "limits_patch": {},
+        "search_variables": [],
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "id": "H146",
+      "actual": "reject",
+      "matched": true,
+      "issues": [
+        "condition_patch.hold2: 요청의 단위 변환값과 다릅니다."
+      ]
+    }
+  ]
+}

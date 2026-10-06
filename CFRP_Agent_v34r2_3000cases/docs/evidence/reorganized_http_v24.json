@@ -1,0 +1,65 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 30332
+    },
+    {
+      "path": "/chat_ui.js",
+      "status": 200,
+      "bytes": 6503
+    },
+    {
+      "path": "/demo_view_v22.js",
+      "status": 200,
+      "bytes": 5206
+    },
+    {
+      "path": "/live_view_v19.js",
+      "status": 200,
+      "bytes": 8701
+    },
+    {
+      "path": "/stack_view_v14.js",
+      "status": 200,
+      "bytes": 8122
+    },
+    {
+      "path": "/studio_layout_v21.js",
+      "status": 200,
+      "bytes": 11021
+    },
+    {
+      "path": "/temperature_view.js",
+      "status": 200,
+      "bytes": 6571
+    },
+    {
+      "path": "/viz3d_live_v20.js",
+      "status": 200,
+      "bytes": 10521
+    },
+    {
+      "path": "/workbench_v14.js",
+      "status": 200,
+      "bytes": 11221
+    },
+    {
+      "path": "/plotly.min.js",
+      "status": 200,
+      "bytes": 4815814
+    },
+    {
+      "path": "/api/config",
+      "status": 200,
+      "bytes": 1367
+    },
+    {
+      "path": "/api/health",
+      "status": 200,
+      "bytes": 50
+    }
+  ],
+  "loaded_model_rows": 700
+}

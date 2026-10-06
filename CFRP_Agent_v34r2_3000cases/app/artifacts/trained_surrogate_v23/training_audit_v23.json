@@ -1,0 +1,78 @@
+{
+  "model_hash": "721e80cd331a71eca50dcd21a69d47e2aa08493dc19d69159f3e79a839a10114",
+  "training_rows": 256,
+  "group_count": 64,
+  "source_label_recheck_errors": {
+    "Tmax": 1.1652900866465643e-12,
+    "delta_Tmax": 0.0,
+    "final_DoC": -2.220446049250313e-16,
+    "cycle_time": 0.0
+  },
+  "group_holdout_metrics": {
+    "Tmax": {
+      "MAE": 2.4741916540598705,
+      "RMSE": 3.95664622806245,
+      "R2": 0.9735377070297254
+    },
+    "delta_Tmax": {
+      "MAE": 1.7475205186168532,
+      "RMSE": 3.028735129327495,
+      "R2": 0.9823465600177967
+    },
+    "final_DoC": {
+      "MAE": 0.00092713136487221,
+      "RMSE": 0.0010797761944356683,
+      "R2": 0.9875100368295545
+    },
+    "cycle_time": {
+      "MAE": 0.009564114525465683,
+      "RMSE": 0.010864956818922302,
+      "R2": 0.9999996596021291
+    }
+  },
+  "final_fit_rows": 256,
+  "fresh_check_rows": 8,
+  "fresh_check_metrics": {
+    "Tmax": {
+      "MAE": 3.983989532728298,
+      "RMSE": 6.132334007881553,
+      "R2": 0.9028248403062109,
+      "max_abs_error": 14.366672515600072
+    },
+    "delta_Tmax": {
+      "MAE": 3.477731497686609,
+      "RMSE": 6.1503715466262125,
+      "R2": 0.8904397087087103,
+      "max_abs_error": 14.789867080784589
+    },
+    "final_DoC": {
+      "MAE": 0.000659046745303718,
+      "RMSE": 0.0007205233750456552,
+      "R2": 0.9944050557820241,
+      "max_abs_error": 0.001092441261471011
+    },
+    "cycle_time": {
+      "MAE": 0.41536204468288673,
+      "RMSE": 0.7715715961157009,
+      "R2": 0.9987391384590072,
+      "max_abs_error": 1.8282597124373297
+    }
+  },
+  "fresh_solver_options": {
+    "nz": 41,
+    "tool_nz": 21,
+    "dt": 1.0,
+    "save_seconds": 30.0
+  },
+  "training_solver_options": {
+    "nz": 31,
+    "tool_nz": 21,
+    "dt": 2.0,
+    "save_seconds": 30.0
+  },
+  "fresh_check_scope": "Eight current solver runs at Agent resolution; includes 5/15/25 mm absent from training thickness levels. Not experimental validation.",
+  "portable_match_inputs": 512,
+  "portable_max_error_tolerance": 1e-09,
+  "seconds": 107.31820613300079,
+  "external_validation_passed": false
+}

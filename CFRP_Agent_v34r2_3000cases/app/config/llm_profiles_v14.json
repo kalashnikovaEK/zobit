@@ -1,0 +1,9 @@
+{
+  "_comment": "[NEW v14] Install a model separately with ollama pull; selection never fabricates an available model.",
+  "profiles": {
+    "gemma2": {"label": "Gemma2", "model": "gemma2"},
+    "qwen3": {"label": "Qwen3 8B", "model": "qwen3:8b"},
+    "qwen3_4b": {"label": "Qwen3 4B", "model": "qwen3:4b"},
+    "qwen3_1_7b": {"label": "Qwen3 1.7B", "model": "qwen3:1.7b"}
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "candidates": 1000,
+  "prediction_seconds": 0.19093878700005007,
+  "targets": 4,
+  "includes_llm_or_physics": false,
+  "training_rows": 256
+}

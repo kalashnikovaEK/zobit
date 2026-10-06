@@ -1,0 +1,116 @@
+{
+  "version": "v03-ncamp15-invar-contact-1d",
+  "material": "AS4/8552 demonstration model",
+  "kinetics": {
+    "Kc": 153900.5,
+    "Ec": 64929.5,
+    "lc": 2.347,
+    "bc": 0.1594,
+    "nc": 1.413,
+    "Ke": 396300000000.0,
+    "Ee": 133168.3,
+    "le": 1.029,
+    "ne": 5.586,
+    "kd": 4.0,
+    "B": 0.21,
+    "af": 0.00048,
+    "b1": 0.021,
+    "b2": 0.031,
+    "Tgb1": 120.0,
+    "Tgb2": 195.0,
+    "Tg0": -7.0,
+    "Tginf": 250.0,
+    "lambda": 0.78
+  },
+  "thermal": {
+    "rho_f": 1790.0,
+    "rho_r": 1301.0,
+    "Vf": 0.55,
+    "Hr": 600000.0,
+    "cp_composite": 1200.0,
+    "k_through": 0.5,
+    "h_top": 50.0,
+    "h_bottom": 50.0
+  },
+  "initial": {
+    "temperature_c": 25.0,
+    "alpha": 0.001,
+    "cool_rate": 3.0,
+    "release_temperature_c": 60.0
+  },
+  "assumptions": [
+    "Effective composite cp=1200 J/kg/K and through-thickness k=0.5 W/m/K are provisional engineering assumptions, NOT NCAMP measurements.",
+    "h_top=h_bottom=50 W/m2/K is a provisional two-air-face convection simplification. It does NOT represent the intended air/composite/tool/contact stack.",
+    "Tooling, bag, contact resistance, pressure and consolidation are not modelled; therefore Li 2020 AS4/8552+Invar reference geometry is not reproduced by this solver.",
+    "Air schedule is prescribed; manufacturer thermocouple-controlled holds are approximated.",
+    "NCAMP resin kinetics/density/Vf are used as a single named demonstration configuration; this is not an authenticated COMPRO implementation.",
+    "v03 active domain is composite + 10 mm Invar tool with explicit contact thermal resistance. Legacy cp_composite/k_through/h_bottom fields remain only for backward provenance and are not used by the v03 solver.",
+    "Composite cure kinetics/reaction basis remain NCAMP Model 15/NCAMP Vf-Hr, while temperature-dependent constituent transport functions and boundary reference are from Li 2020. This is a documented hybrid demonstration model, not an exact Li reproduction.",
+    "Invar rho/cp/k use typical tooling values 8000 kg/m3, 515 J/kg/K, 11 W/m/K from CKN because Li 2020 does not publish these values in the article text.",
+    "No numeric cool-down contact degradation is imposed because Li 2020 reports the trend qualitatively but does not provide a fitted conductance."
+  ],
+  "sources": [
+    {
+      "id": "NCAMP2009",
+      "url": "https://www.wichita.edu/industry_and_defense/NIAR/Research/hexcel-8552/Additional-Documents-2.pdf",
+      "pages": "7,12,13,15",
+      "supports": "Model 15 kinetics, Tg, heat of reaction, densities, Vf"
+    },
+    {
+      "id": "HEXCEL8552",
+      "url": "https://www.hexcel.com/wp-content/uploads/2025/12/HexPly_8552_eu_DataSheet1.pdf",
+      "pages": "5",
+      "supports": "2-stage cure ranges, cooling and component release temperature"
+    },
+    {
+      "id": "LI2020",
+      "url": "https://doi.org/10.1016/j.compstruct.2020.112822",
+      "pages": "2-8",
+      "supports": "AS4/8552 constituent thermal-property functions, 10 mm tool geometry, MRCC, top h=85.2, BC1/BC2/BC3 definitions, h_contact=1e5/0 limiting cases and FBG temperature validation layout"
+    },
+    {
+      "id": "CKN_INVAR",
+      "url": "https://compositeskn.org/KPC/P129",
+      "pages": "web table",
+      "supports": "Typical Invar density 8000 kg/m3, cp 515 J/kg/K, k 11 W/m/K"
+    }
+  ],
+  "external_validation_passed": false,
+  "composite_transport": {
+    "model": "Li2020 constituent transport functions with team mass-weighted cp; active Vf/rho from NCAMP thermal block",
+    "resin_k_intercept": 0.148,
+    "resin_k_slope_per_c": 0.000343,
+    "fiber_k_transverse_intercept": 7.69,
+    "fiber_k_transverse_slope_per_c": 0.0156,
+    "resin_cp_intercept": 931.0,
+    "resin_cp_slope_per_c": 3.47,
+    "fiber_cp_intercept": 750.0,
+    "fiber_cp_slope_per_c": 2.05,
+    "source_reference_vf": 0.574,
+    "cp_mixing": "mass_weighted_by_constituent_mass (team-theory correction; differs from Li Eq.3 volume-weighted cp)",
+    "k_through_model": "Li2020 Eq.5 transverse/through-thickness relation"
+  },
+  "tool": {
+    "material": "Invar",
+    "thickness_mm": 10.0,
+    "rho": 8000.0,
+    "cp": 515.0,
+    "k": 11.0,
+    "source": "CKN tooling typical properties; Li 2020 does not list Invar rho/cp/k in the paper text",
+    "source_url": "https://compositeskn.org/KPC/P129"
+  },
+  "boundary": {
+    "reference_case": "Li2020 BC1-like default",
+    "h_top": 85.2,
+    "contact_h": 100000.0,
+    "contact_h_cooldown": null,
+    "tool_outer_bc": "prescribed",
+    "tool_outer_h": 85.2,
+    "notes": [
+      "Top composite convection h=85.2 W/m2/K follows Li 2020.",
+      "Good-contact reference h_contact=1e5 W/m2/K is an extreme comparison condition in Li 2020, not a measured universal contact coefficient.",
+      "Default tool outer boundary is prescribed to the commanded autoclave air schedule (BC1-like).",
+      "Li 2020 indicates poorer contact during cool-down qualitatively but does not supply a measured numeric cool-down conductance; no invented value is applied."
+    ]
+  }
+}

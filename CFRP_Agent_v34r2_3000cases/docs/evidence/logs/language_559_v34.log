@@ -1,0 +1,73 @@
+/workspace/scratch/531d68b35e17/CFRP_Agent_v34/app/runtime_v17.py:34: RuntimeWarning: CFRP uses Python solver: native probe exit=1; calculation may be slower.
+  warnings.warn('CFRP uses Python solver: ' + STATUS['reason'] + '; calculation may be slower.', RuntimeWarning)
+{
+  "total": 559,
+  "matched": 554,
+  "false_accepts": 0,
+  "mismatches": [
+    {
+      "corpus": "CFRP_Language_Audit_v33.json",
+      "id": "C0374",
+      "request": "1차 유지시간 01:30 계산해줘",
+      "expected": "pass",
+      "actual": "reject",
+      "matched": false,
+      "issues": [
+        "시간 콜론 표기는 모호합니다. 90분처럼 단위를 명시하십시오.",
+        "단계/변수에 연결되지 않은 숫자가 있습니다. 각 변수의 최종 값을 명시하십시오.",
+        "hold1: 요청의 값/단위와 AI 적용값이 일치하지 않습니다. 명시하지 않은 숫자를 추가할 수 없습니다."
+      ]
+    },
+    {
+      "corpus": "CFRP_Language_Audit_v33.json",
+      "id": "C0379",
+      "request": "1차 유지온도 110도에서 120도로 바꿔 계산해줘",
+      "expected": "pass",
+      "actual": "reject",
+      "matched": false,
+      "issues": [
+        "변경 후 각 단계의 최종 값을 직접 지정하십시오. 상대값/참조값은 자동 적용하지 않습니다.",
+        "단계/변수에 연결되지 않은 숫자가 있습니다. 각 변수의 최종 값을 명시하십시오.",
+        "T1: 요청의 값/단위와 AI 적용값이 일치하지 않습니다. 명시하지 않은 숫자를 추가할 수 없습니다."
+      ]
+    },
+    {
+      "corpus": "CFRP_Language_Audit_v33.json",
+      "id": "C0380",
+      "request": "두께 10mm 대신 12mm로 계산해줘",
+      "expected": "pass",
+      "actual": "reject",
+      "matched": false,
+      "issues": [
+        "변경 후 각 단계의 최종 값을 직접 지정하십시오. 상대값/참조값은 자동 적용하지 않습니다.",
+        "단계/변수에 연결되지 않은 숫자가 있습니다. 각 변수의 최종 값을 명시하십시오.",
+        "thickness: 요청의 값/단위와 AI 적용값이 일치하지 않습니다. 명시하지 않은 숫자를 추가할 수 없습니다."
+      ]
+    },
+    {
+      "corpus": "CFRP_Language_Audit_v33.json",
+      "id": "C0381",
+      "request": "1차 유지시간 60분, 2차도 같은 시간으로 계산해줘",
+      "expected": "pass",
+      "actual": "reject",
+      "matched": false,
+      "issues": [
+        "변경 후 각 단계의 최종 값을 직접 지정하십시오. 상대값/참조값은 자동 적용하지 않습니다.",
+        "hold2: 요청의 값/단위와 AI 적용값이 일치하지 않습니다. 명시하지 않은 숫자를 추가할 수 없습니다."
+      ]
+    },
+    {
+      "corpus": "CFRP_Language_Audit_v33.json",
+      "id": "C0382",
+      "request": "1차 유지온도 110도, 2차는 70도 더 높게 계산해줘",
+      "expected": "pass",
+      "actual": "reject",
+      "matched": false,
+      "issues": [
+        "변경 후 각 단계의 최종 값을 직접 지정하십시오. 상대값/참조값은 자동 적용하지 않습니다.",
+        "단계/변수에 연결되지 않은 숫자가 있습니다. 각 변수의 최종 값을 명시하십시오.",
+        "T2: 요청의 값/단위와 AI 적용값이 일치하지 않습니다. 명시하지 않은 숫자를 추가할 수 없습니다."
+      ]
+    }
+  ]
+}

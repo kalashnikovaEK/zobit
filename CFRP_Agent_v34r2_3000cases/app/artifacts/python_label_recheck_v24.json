@@ -1,0 +1,36 @@
+{
+  "backend": {
+    "backend": "python",
+    "reason": "native probe exit=1",
+    "detail": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'numba'\n"
+  },
+  "checks": [
+    {
+      "row": 256,
+      "errors": {
+        "Tmax": 0.0,
+        "delta_Tmax": 0.0,
+        "final_DoC": 0.0,
+        "cycle_time": 0.0
+      }
+    },
+    {
+      "row": 480,
+      "errors": {
+        "Tmax": -1.4210854715202004e-13,
+        "delta_Tmax": 3.979039320256561e-13,
+        "final_DoC": -2.220446049250313e-16,
+        "cycle_time": -5.684341886080802e-14
+      }
+    },
+    {
+      "row": 699,
+      "errors": {
+        "Tmax": 0.0,
+        "delta_Tmax": 1.7053025658242404e-13,
+        "final_DoC": 0.0,
+        "cycle_time": -1.1368683772161603e-13
+      }
+    }
+  ]
+}

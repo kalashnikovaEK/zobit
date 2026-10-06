@@ -1,0 +1,29 @@
+[
+  {
+    "target": "minimize_time",
+    "status": "completed",
+    "result_guard": "passed",
+    "physics_rechecked": 4,
+    "recommendations": 3,
+    "fit_rows": 3000,
+    "llm_inference": false
+  },
+  {
+    "target": "minimize_peak",
+    "status": "completed",
+    "result_guard": "passed",
+    "physics_rechecked": 4,
+    "recommendations": 3,
+    "fit_rows": 3000,
+    "llm_inference": false
+  },
+  {
+    "target": "minimize_spread",
+    "status": "completed",
+    "result_guard": "passed",
+    "physics_rechecked": 4,
+    "recommendations": 3,
+    "fit_rows": 3000,
+    "llm_inference": false
+  }
+]

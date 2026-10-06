@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "checks": [
+    "actual HTTP extension asset",
+    "six demo traces, default temperature difference, nonuniform cell colors, bag and material labels",
+    "real solver result",
+    "persistent right-edge page scrollbar and actual wheel scrolling",
+    "single visible chart in 7 views",
+    "SVG only fallback view",
+    "sidebar input/AI switch",
+    "original plot arrays match result",
+    "1440px left viewer/right input, no horizontal overflow",
+    "760px responsive layout, no horizontal overflow",
+    "input invalidation clears KPI and disables playback",
+    "toolbar executes original calculation and updates T2",
+    "AI response envelope using actual solver arrays preserves single baseline/selected view and candidate change",
+    "real measured upload displays null cycle time and updates single heatmap"
+  ],
+  "errors": [],
+  "layout": {
+    "vx": 0,
+    "sx": 997.5,
+    "vwidth": 997.5,
+    "swidth": 427.5,
+    "overflow": false
+  }
+}

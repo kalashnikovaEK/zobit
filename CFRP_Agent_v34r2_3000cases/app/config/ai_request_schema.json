@@ -1,0 +1,30 @@
+{
+  "$comment": "[NEW v11] AI request contract; Python performs independent semantic validation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["action", "target", "material", "temperature_unit", "condition_patch", "limits_patch", "search_variables", "needs_clarification", "clarification_question"],
+  "properties": {
+    "action": {"type": "string", "enum": ["simulate_process", "predict_process", "optimize_cycle"]},
+    "target": {"type": "string", "enum": ["minimize_time", "minimize_peak", "minimize_spread", "balanced"]},
+    "material": {"type": "string"},
+    "temperature_unit": {"type": "string", "enum": ["C", "K"]},
+    "condition_patch": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "ramp1": {"type": "number"}, "T1": {"type": "number"}, "hold1": {"type": "number"},
+        "ramp2": {"type": "number"}, "T2": {"type": "number"}, "hold2": {"type": "number"},
+        "thickness": {"type": "number"}
+      }
+    },
+    "limits_patch": {
+      "type": "object", "additionalProperties": false,
+      "properties": {"Tmax": {"type": "number"}, "delta_Tmax": {"type": "number"}, "final_DoC": {"type": "number"}}
+    },
+    "search_variables": {
+      "type": "array", "uniqueItems": true,
+      "items": {"type": "string", "enum": ["ramp1", "T1", "hold1", "ramp2", "T2", "hold2"]}
+    },
+    "needs_clarification": {"type": "boolean"},
+    "clarification_question": {"type": ["string", "null"]}
+  }
+}

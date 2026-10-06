@@ -1,0 +1,10 @@
+test_700_optimizer_actual_physics (test_surrogate_v24.ExpandedModelTests.test_700_optimizer_actual_physics) ... ok
+test_700_prediction_actual_async_physics (test_surrogate_v24.ExpandedModelTests.test_700_prediction_actual_async_physics) ... ok
+test_700_rows_unique_groups_and_cache (test_surrogate_v24.ExpandedModelTests.test_700_rows_unique_groups_and_cache) ... ok
+test_explicit_bundle_bypasses_auto_load (test_surrogate_v24.ExpandedModelTests.test_explicit_bundle_bypasses_auto_load) ... ok
+test_integrity_and_missing (test_surrogate_v24.ExpandedModelTests.test_integrity_and_missing) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 6.387s
+
+OK

@@ -1,0 +1,39 @@
+test_saved_model_optimizer_rechecks_physics (test_agent_trained_v23.TrainedOptimizerTests.test_saved_model_optimizer_rechecks_physics) ... ok
+test_async_agent_uses_saved_model_without_training (test_surrogate_v23.SavedModelTests.test_async_agent_uses_saved_model_without_training) ... ok
+test_corrupt_and_stale_models_blocked (test_surrogate_v23.SavedModelTests.test_corrupt_and_stale_models_blocked) ... ok
+test_missing_model_is_optional (test_surrogate_v23.SavedModelTests.test_missing_model_is_optional) ... ok
+test_prediction_and_cache (test_surrogate_v23.SavedModelTests.test_prediction_and_cache) ... ok
+test_700_optimizer_actual_physics (test_surrogate_v24.ExpandedModelTests.test_700_optimizer_actual_physics) ... ok
+test_700_prediction_actual_async_physics (test_surrogate_v24.ExpandedModelTests.test_700_prediction_actual_async_physics) ... ok
+test_700_rows_unique_groups_and_cache (test_surrogate_v24.ExpandedModelTests.test_700_rows_unique_groups_and_cache) ... ok
+test_explicit_bundle_bypasses_auto_load (test_surrogate_v24.ExpandedModelTests.test_explicit_bundle_bypasses_auto_load) ... ok
+test_integrity_and_missing (test_surrogate_v24.ExpandedModelTests.test_integrity_and_missing) ... ok
+test_async_offload (test_v17.Regression.test_async_offload) ... ok
+test_bad_options (test_v17.Regression.test_bad_options) ... ok
+test_guard_none (test_v17.Regression.test_guard_none) ... ok
+test_http_routes (test_v17.Regression.test_http_routes) ... ok
+test_integrity (test_v17.Regression.test_integrity) ... ok
+test_measured_null (test_v17.Regression.test_measured_null) ... ok
+test_missing_calculation (test_v17.Regression.test_missing_calculation) ... ok
+test_native_failure_fallback (test_v17.Regression.test_native_failure_fallback) ... <REDACTED_USER_PATH>\runtime_v17.py:34: RuntimeWarning: CFRP uses Python solver: native probe exit=-11; calculation may be slower.
+  warnings.warn('CFRP uses Python solver: ' + STATUS['reason'] + '; calculation may be slower.', RuntimeWarning)
+ok
+test_spec_grounding (test_v17.Regression.test_spec_grounding) ... ok
+test_spec_guard (test_v17.Regression.test_spec_guard) ... ok
+test_training_optimization (test_v17.Regression.test_training_optimization) ... ok
+test_windows_bootstrap_orchestration (test_v17.Regression.test_windows_bootstrap_orchestration) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 10.147s
+
+OK
+[HTML API] "GET / HTTP/1.1" 200 -
+[HTML API] "GET /api/config HTTP/1.1" 200 -
+[HTML API] "GET /api/models HTTP/1.1" 200 -
+[HTML API] "GET /chat_ui.js HTTP/1.1" 200 -
+[HTML API] "GET /workbench_v14.js HTTP/1.1" 200 -
+[HTML API] "POST /api/simulate HTTP/1.1" 200 -
+[HTML API] "POST /api/measured HTTP/1.1" 200 -
+[HTML API] "POST /api/ai/chat HTTP/1.1" 200 -
+Starting http://127.0.0.1:8765/ ; keep this console open.
+Runtime check failed. See runtime_check_v18.log.

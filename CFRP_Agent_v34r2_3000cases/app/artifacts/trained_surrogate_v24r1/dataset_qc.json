@@ -1,0 +1,20 @@
+{
+  "training_rows": 3000,
+  "preserved_rows": 700,
+  "new_physics_rows": 2300,
+  "groups": 750,
+  "duplicate_inputs": 0,
+  "nonfinite": 0,
+  "model_hash": "721e80cd331a71eca50dcd21a69d47e2aa08493dc19d69159f3e79a839a10114",
+  "seeds": [
+    35001,
+    35002
+  ],
+  "solver_options": {
+    "nz": 31,
+    "tool_nz": 21,
+    "dt": 2.0,
+    "save_seconds": 30.0
+  },
+  "external_validation_passed": false
+}

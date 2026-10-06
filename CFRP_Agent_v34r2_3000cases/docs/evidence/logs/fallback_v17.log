@@ -1,0 +1,4 @@
+/workspace/scratch/dbacafbd0b97/work/CFRP_Agent_v17/runtime_v17.py:34: RuntimeWarning: CFRP uses Python solver: CFRP_DISABLE_NUMBA=1; calculation may be slower.
+  warnings.warn('CFRP uses Python solver: ' + STATUS['reason'] + '; calculation may be slower.', RuntimeWarning)
+{'Tmax': 187.2374611693765, 'delta_Tmax': 6.202310730035691, 'final_DoC': 0.8905532062888645, 'cycle_time': 299.0, 'peak_time': 139.5, 'air_excess': 7.237461169376502, 'hold_end_DoC': 0.8904484367866397, 'hold_end_time': 257.5, 'tool_Tmax': 181.02406063026825, 'interface_delta_Tmax': 0.011336290803797056, 'contact_flux_abs_max': 1133.6290803806958}
+Python fallback nominal and measured passed

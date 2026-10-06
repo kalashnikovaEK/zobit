@@ -1,0 +1,16 @@
+{
+  "changed_existing_files": [
+    "demo_view_v22.js",
+    "interactive.html",
+    "live_view_v19.js",
+    "stack_view_v14.js",
+    "temperature_view.js",
+    "README.md"
+  ],
+  "unchanged_original_files": 116,
+  "html_structure_unchanged": true,
+  "all_python_and_models_unchanged": true,
+  "syntax": "passed",
+  "existing_node_tests": 4,
+  "browser_visual_qa": "not performed"
+}

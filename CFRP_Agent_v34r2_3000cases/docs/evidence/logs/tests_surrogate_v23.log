@@ -1,0 +1,11 @@
+/workspace/scratch/00db4e1b70f9/work/CFRP_Agent_v20/runtime_v17.py:34: RuntimeWarning: CFRP uses Python solver: CFRP_DISABLE_NUMBA=1; calculation may be slower.
+  warnings.warn('CFRP uses Python solver: ' + STATUS['reason'] + '; calculation may be slower.', RuntimeWarning)
+test_async_agent_uses_saved_model_without_training (test_surrogate_v23.SavedModelTests.test_async_agent_uses_saved_model_without_training) ... ok
+test_corrupt_and_stale_models_blocked (test_surrogate_v23.SavedModelTests.test_corrupt_and_stale_models_blocked) ... ok
+test_missing_model_is_optional (test_surrogate_v23.SavedModelTests.test_missing_model_is_optional) ... ok
+test_prediction_and_cache (test_surrogate_v23.SavedModelTests.test_prediction_and_cache) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 12.543s
+
+OK

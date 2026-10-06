@@ -1,0 +1,6 @@
+[HTML API] "GET /chat_ui.js HTTP/1.1" 200 -
+[HTML API] "POST /api/ai/chat HTTP/1.1" 200 -
+[HTML API] "POST /api/ai/chat HTTP/1.1" 400 -
+[HTML API] "POST /api/ai/chat HTTP/1.1" 200 -
+[HTML API] "POST /api/ai/chat HTTP/1.1" 400 -
+{'http_preview': True, 'fit_rows': 3000, 'optimization_candidates': 3, 'unconfirmed_physics_calls': 0, 'changed_input_rejected': True, 'replayed_token_rejected': True, 'confirmed_physics': 'real solver', 'result_guard': 'passed', 'llm': 'mocked extraction; no actual Ollama'}

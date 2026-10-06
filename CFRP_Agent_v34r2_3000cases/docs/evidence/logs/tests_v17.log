@@ -1,0 +1,40 @@
+test_async_offload (test_v17.Regression.test_async_offload) ... ok
+test_bad_options (test_v17.Regression.test_bad_options) ... ok
+test_guard_none (test_v17.Regression.test_guard_none) ... ok
+test_http_routes (test_v17.Regression.test_http_routes) ... ok
+test_integrity (test_v17.Regression.test_integrity) ... ok
+test_measured_null (test_v17.Regression.test_measured_null) ... ok
+test_missing_calculation (test_v17.Regression.test_missing_calculation) ... ok
+test_native_failure_fallback (test_v17.Regression.test_native_failure_fallback) ... /workspace/scratch/dbacafbd0b97/work/CFRP_Agent_v17/runtime_v17.py:34: RuntimeWarning: CFRP uses Python solver: native probe exit=-11; calculation may be slower.
+  warnings.warn('CFRP uses Python solver: ' + STATUS['reason'] + '; calculation may be slower.', RuntimeWarning)
+ok
+test_spec_grounding (test_v17.Regression.test_spec_grounding) ... ok
+test_spec_guard (test_v17.Regression.test_spec_guard) ... 
+  test_spec_guard (test_v17.Regression.test_spec_guard) (request='알루미늄 공정 분석') ... ERROR
+test_training_optimization (test_v17.Regression.test_training_optimization) ... ok
+
+======================================================================
+ERROR: test_spec_guard (test_v17.Regression.test_spec_guard) (request='알루미늄 공정 분석')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/dbacafbd0b97/work/CFRP_Agent_v17/tests/test_v17.py", line 24, in test_spec_guard
+    self.assertEqual(AI.run_ai(request=request,spec=spec)['status'],'needs_clarification');solver.assert_not_called()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/dbacafbd0b97/work/CFRP_Agent_v17/AI.py", line 430, in run_ai
+    validate_request_grounding(request, spec, parsed)
+  File "/workspace/scratch/dbacafbd0b97/work/CFRP_Agent_v17/AI.py", line 252, in validate_request_grounding
+    raise ValueError('지원하지 않는 재료가 명시되었습니다. needs_clarification=true와 확인 질문을 출력하십시오.')
+ValueError: 지원하지 않는 재료가 명시되었습니다. needs_clarification=true와 확인 질문을 출력하십시오.
+
+----------------------------------------------------------------------
+Ran 11 tests in 8.317s
+
+FAILED (errors=1)
+[HTML API] "GET / HTTP/1.1" 200 -
+[HTML API] "GET /api/config HTTP/1.1" 200 -
+[HTML API] "GET /api/models HTTP/1.1" 200 -
+[HTML API] "GET /chat_ui.js HTTP/1.1" 200 -
+[HTML API] "GET /workbench_v14.js HTTP/1.1" 200 -
+[HTML API] "POST /api/simulate HTTP/1.1" 200 -
+[HTML API] "POST /api/measured HTTP/1.1" 200 -
+[HTML API] "POST /api/ai/chat HTTP/1.1" 200 -

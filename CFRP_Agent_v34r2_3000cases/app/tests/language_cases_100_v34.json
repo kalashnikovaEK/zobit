@@ -1,0 +1,3407 @@
+[
+  {
+    "id": "T001",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2차 승온속도만 조절해서 최고온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T002",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 1차와 2차 유지시간만 조절해서 최고온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T003",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 유지시간만 조절해서 최고온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T004",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 ramp2만 조절해서 최고온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T005",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2단계 승온속도만 조절해서 최고온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "어느 변수에 적용되는지 규칙으로 확인할 수 없는 숫자가 있습니다.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T006",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2차 승온속도만 조절해서 최고 내부온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T007",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 1차와 2차 유지시간만 조절해서 최고 내부온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T008",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 유지시간만 조절해서 최고 내부온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T009",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 ramp2만 조절해서 최고 내부온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T010",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2단계 승온속도만 조절해서 최고 내부온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "어느 변수에 적용되는지 규칙으로 확인할 수 없는 숫자가 있습니다.",
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T011",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2차 승온속도만 조절해서 내부 최고온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T012",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 1차와 2차 유지시간만 조절해서 내부 최고온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T013",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 유지시간만 조절해서 내부 최고온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T014",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 ramp2만 조절해서 내부 최고온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T015",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2단계 승온속도만 조절해서 내부 최고온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "어느 변수에 적용되는지 규칙으로 확인할 수 없는 숫자가 있습니다.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T016",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2차 승온속도만 조절해서 최대 내부 온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T017",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 1차와 2차 유지시간만 조절해서 최대 내부 온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T018",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 유지시간만 조절해서 최대 내부 온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T019",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 ramp2만 조절해서 최대 내부 온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T020",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2단계 승온속도만 조절해서 최대 내부 온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "어느 변수에 적용되는지 규칙으로 확인할 수 없는 숫자가 있습니다.",
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T021",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2차 승온속도만 조절해서 피크 온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T022",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 1차와 2차 유지시간만 조절해서 피크 온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T023",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 유지시간만 조절해서 피크 온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T024",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 ramp2만 조절해서 피크 온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T025",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2단계 승온속도만 조절해서 피크 온도를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "어느 변수에 적용되는지 규칙으로 확인할 수 없는 숫자가 있습니다.",
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T026",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2차 승온속도만 조절해서 Tmax를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T027",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 1차와 2차 유지시간만 조절해서 Tmax를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T028",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 유지시간만 조절해서 Tmax를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T029",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 ramp2만 조절해서 Tmax를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T030",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2단계 승온속도만 조절해서 Tmax를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "어느 변수에 적용되는지 규칙으로 확인할 수 없는 숫자가 있습니다.",
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T031",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2차 승온속도만 조절해서 최고온도를 낮춰줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "수행할 작업을 계산/분석/예측/최적화로 구체적으로 지정하십시오.",
+      "action: 요청한 작업과 AI가 선택한 도구가 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T032",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 1차와 2차 유지시간만 조절해서 최고온도를 낮춰줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "수행할 작업을 계산/분석/예측/최적화로 구체적으로 지정하십시오.",
+      "action: 요청한 작업과 AI가 선택한 도구가 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T033",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 유지시간만 조절해서 최고온도를 낮춰줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "수행할 작업을 계산/분석/예측/최적화로 구체적으로 지정하십시오.",
+      "action: 요청한 작업과 AI가 선택한 도구가 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T034",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 ramp2만 조절해서 최고온도를 낮춰줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "수행할 작업을 계산/분석/예측/최적화로 구체적으로 지정하십시오.",
+      "action: 요청한 작업과 AI가 선택한 도구가 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T035",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2단계 승온속도만 조절해서 최고온도를 낮춰줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "어느 변수에 적용되는지 규칙으로 확인할 수 없는 숫자가 있습니다.",
+      "수행할 작업을 계산/분석/예측/최적화로 구체적으로 지정하십시오.",
+      "action: 요청한 작업과 AI가 선택한 도구가 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "ramp1",
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T036",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2차 승온속도만 조절해서 최고온도가 가장 낮은 조건을 찾아줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T037",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 1차와 2차 유지시간만 조절해서 최고온도가 가장 낮은 조건을 찾아줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T038",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 유지시간만 조절해서 최고온도가 가장 낮은 조건을 찾아줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T039",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 ramp2만 조절해서 최고온도가 가장 낮은 조건을 찾아줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T040",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2단계 승온속도만 조절해서 최고온도가 가장 낮은 조건을 찾아줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "어느 변수에 적용되는지 규칙으로 확인할 수 없는 숫자가 있습니다.",
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T041",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2차 승온속도만 조절해서 최고온도를 가능한 한 줄여줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T042",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 1차와 2차 유지시간만 조절해서 최고온도를 가능한 한 줄여줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T043",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 유지시간만 조절해서 최고온도를 가능한 한 줄여줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T044",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 ramp2만 조절해서 최고온도를 가능한 한 줄여줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T045",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2단계 승온속도만 조절해서 최고온도를 가능한 한 줄여줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "어느 변수에 적용되는지 규칙으로 확인할 수 없는 숫자가 있습니다.",
+      "최적화 목표를 시간/최고온도/온도편차 중 하나 또는 균형으로 명시하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T046",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2차 승온속도만 조절해서 온도편차를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_spread",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T047",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 1차와 2차 유지시간만 조절해서 온도편차를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_spread",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T048",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 유지시간만 조절해서 온도편차를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_spread",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T049",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 ramp2만 조절해서 온도편차를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_spread",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T050",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2단계 승온속도만 조절해서 온도편차를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_spread",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "어느 변수에 적용되는지 규칙으로 확인할 수 없는 숫자가 있습니다.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T051",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2차 승온속도만 조절해서 최대 온도편차를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_spread",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T052",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 1차와 2차 유지시간만 조절해서 최대 온도편차를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_spread",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T053",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 유지시간만 조절해서 최대 온도편차를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_spread",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T054",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 ramp2만 조절해서 최대 온도편차를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_spread",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T055",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2단계 승온속도만 조절해서 최대 온도편차를 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_spread",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "어느 변수에 적용되는지 규칙으로 확인할 수 없는 숫자가 있습니다.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T056",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2차 승온속도만 조절해서 공정시간을 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_time",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T057",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 1차와 2차 유지시간만 조절해서 공정시간을 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_time",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T058",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 유지시간만 조절해서 공정시간을 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_time",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold1",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T059",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 ramp2만 조절해서 공정시간을 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_time",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T060",
+    "group": "정상 목표·탐색범위",
+    "request": "현재 공정에서 2단계 승온속도만 조절해서 공정시간을 최소화해줘. 나머지 조건은 유지해줘.",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_time",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "어느 변수에 적용되는지 규칙으로 확인할 수 없는 숫자가 있습니다.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T061",
+    "group": "정상 고정·제외",
+    "request": "2차 승온속도만 조절해서 최고온도를 최소화해줘. 나머지 조건은 유지해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T062",
+    "group": "정상 고정·제외",
+    "request": "2차 승온속도만 조절해서 최고온도를 최소화해줘. 두께는 고정해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "부정·제외·고정 또는 지원 밖 명령은 구조화 입력으로 명확히 지정하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T063",
+    "group": "정상 고정·제외",
+    "request": "2차 승온속도만 조절해서 최고온도를 최소화해줘. 유지시간과 유지온도는 바꾸지 마",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2",
+        "T1",
+        "T2",
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T064",
+    "group": "정상 고정·제외",
+    "request": "2차 승온속도만 조절해서 최고온도를 최소화해줘. 1차 승온속도는 변경하지 마",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "부정·제외·고정 또는 지원 밖 명령은 구조화 입력으로 명확히 지정하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T065",
+    "group": "정상 고정·제외",
+    "request": "2차 승온속도만 조절해서 최고온도를 최소화해줘. 유지시간은 변경하지 말아줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "부정·제외·고정 또는 지원 밖 명령은 구조화 입력으로 명확히 지정하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2",
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T066",
+    "group": "정상 고정·제외",
+    "request": "2차 승온속도만 조절해서 최고온도를 최소화해줘. 유지온도는 고정해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "부정·제외·고정 또는 지원 밖 명령은 구조화 입력으로 명확히 지정하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2",
+        "T1",
+        "T2"
+      ]
+    }
+  },
+  {
+    "id": "T067",
+    "group": "정상 고정·제외",
+    "request": "2차 승온속도만 조절해서 최고온도를 최소화해줘. 유지시간은 제외해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "부정·제외·고정 또는 지원 밖 명령은 구조화 입력으로 명확히 지정하십시오.",
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2",
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T068",
+    "group": "정상 고정·제외",
+    "request": "2차 승온속도만 조절해서 최고온도를 최소화해줘. 두께는 바꾸지 말고 유지해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "부정·제외·고정 또는 지원 밖 명령은 구조화 입력으로 명확히 지정하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T069",
+    "group": "정상 고정·제외",
+    "request": "2차 승온속도만 조절해서 최고온도를 최소화해줘. 다른 변수는 조절하지 마",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "부정·제외·고정 또는 지원 밖 명령은 구조화 입력으로 명확히 지정하십시오."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T070",
+    "group": "정상 고정·제외",
+    "request": "2차 승온속도만 조절해서 최고온도를 최소화해줘. 현재 유지온도를 그대로 사용해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2",
+        "T1",
+        "T2"
+      ]
+    }
+  },
+  {
+    "id": "T071",
+    "group": "정상 수치·단위",
+    "request": "두께 10mm 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {
+        "thickness": 10
+      },
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {
+        "thickness": 10.0
+      },
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T072",
+    "group": "정상 수치·단위",
+    "request": "두께 1cm 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {
+        "thickness": 10
+      },
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {
+        "thickness": 10.0
+      },
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T073",
+    "group": "정상 수치·단위",
+    "request": "1차 유지시간 1시간 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {
+        "hold1": 60
+      },
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {
+        "hold1": 60.0
+      },
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "hold1"
+      ]
+    }
+  },
+  {
+    "id": "T074",
+    "group": "정상 수치·단위",
+    "request": "1차 유지온도 383.15K 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {
+        "T1": 110
+      },
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {
+        "T1": 110.0
+      },
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "T1"
+      ]
+    }
+  },
+  {
+    "id": "T075",
+    "group": "정상 수치·단위",
+    "request": "두께 0.01m 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {
+        "thickness": 10
+      },
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "validate_request_grounding",
+    "errors": [
+      "condition_patch.thickness: 사용자가 명시하지 않은 숫자를 추가했습니다. 미지정 필드는 생략하십시오."
+    ],
+    "evidence": {}
+  },
+  {
+    "id": "T076",
+    "group": "정상 수치·단위",
+    "request": "1차 유지시간 3600초 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {
+        "hold1": 60
+      },
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "hold1: 사용자 근거와 AI의 적용값이 일치하지 않습니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {
+        "hold1": 3600.0
+      },
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "hold1"
+      ]
+    }
+  },
+  {
+    "id": "T077",
+    "group": "정상 수치·단위",
+    "request": "1차 유지시간 1시간 30분 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {
+        "hold1": 90
+      },
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "validate_request_grounding",
+    "errors": [
+      "condition_patch.hold1: 사용자가 명시하지 않은 숫자를 추가했습니다. 미지정 필드는 생략하십시오."
+    ],
+    "evidence": {}
+  },
+  {
+    "id": "T078",
+    "group": "정상 수치·단위",
+    "request": "2차 승온속도 2도/min 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {
+        "ramp2": 2
+      },
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "ramp2: 단위를 확인해야 합니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {
+        "ramp2": 2.0
+      },
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T079",
+    "group": "정상 수치·단위",
+    "request": "최고온도 200도 이하에서 공정시간을 최소화해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_time",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {
+        "Tmax": 200
+      },
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": true,
+    "match": true,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {
+        "Tmax": 200.0
+      },
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T080",
+    "group": "정상 수치·단위",
+    "request": "최고 내부온도 200도 이하에서 공정시간을 최소화해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_time",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {
+        "Tmax": 200
+      },
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": true,
+    "actual_pass": false,
+    "match": false,
+    "stage": "review_request",
+    "errors": [
+      "어느 변수에 적용되는지 규칙으로 확인할 수 없는 숫자가 있습니다.",
+      "Tmax: 사용자 근거와 AI의 적용값이 일치하지 않습니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T081",
+    "group": "오해석·지원 밖",
+    "request": "2차 승온속도만 조절해서 최고온도를 최소화해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": false,
+    "match": true,
+    "stage": "review_request",
+    "errors": [
+      "search_variables: 사용자가 지정한 변경 범위와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T082",
+    "group": "오해석·지원 밖",
+    "request": "ramp2만 조절해서 최고온도를 최소화해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": true,
+    "match": false,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T083",
+    "group": "오해석·지원 밖",
+    "request": "두 번째 승온속도만 조절해서 최고온도를 최소화해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp1",
+        "ramp2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": true,
+    "match": false,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "ramp2"
+      ]
+    }
+  },
+  {
+    "id": "T084",
+    "group": "오해석·지원 밖",
+    "request": "1차와 2차 유지시간만 조절해서 온도편차를 최소화해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_spread",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": true,
+    "match": false,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T085",
+    "group": "오해석·지원 밖",
+    "request": "최고온도를 최소화해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_time",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": false,
+    "match": true,
+    "stage": "review_request",
+    "errors": [
+      "target: 요청한 최적화 목표와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T086",
+    "group": "오해석·지원 밖",
+    "request": "최고온도 200도 이상에서 공정시간을 최소화해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_time",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {
+        "Tmax": 200
+      },
+      "search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": true,
+    "match": false,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {
+        "Tmax": 200.0
+      },
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T087",
+    "group": "오해석·지원 밖",
+    "request": "온도편차 10도 이상에서 공정시간을 최소화해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_time",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {
+        "delta_Tmax": 10
+      },
+      "search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": true,
+    "match": false,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {
+        "delta_Tmax": 10.0
+      },
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T088",
+    "group": "오해석·지원 밖",
+    "request": "최종경화도 90% 이하에서 공정시간을 최소화해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_time",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {
+        "final_DoC": 0.9
+      },
+      "search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": true,
+    "match": false,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {
+        "final_DoC": 0.9
+      },
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T089",
+    "group": "오해석·지원 밖",
+    "request": "현재 공정 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {
+        "thickness": 10
+      },
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": false,
+    "match": true,
+    "stage": "validate_request_grounding",
+    "errors": [
+      "condition_patch.thickness: 사용자가 명시하지 않은 숫자를 추가했습니다. 미지정 필드는 생략하십시오."
+    ],
+    "evidence": {}
+  },
+  {
+    "id": "T090",
+    "group": "오해석·지원 밖",
+    "request": "두께 1cm 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {
+        "thickness": 1
+      },
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": false,
+    "match": true,
+    "stage": "review_request",
+    "errors": [
+      "thickness: 사용자 근거와 AI의 적용값이 일치하지 않습니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {
+        "thickness": 10.0
+      },
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T091",
+    "group": "오해석·지원 밖",
+    "request": "1차 유지시간 1시간 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {
+        "hold1": 1
+      },
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": false,
+    "match": true,
+    "stage": "review_request",
+    "errors": [
+      "hold1: 사용자 근거와 AI의 적용값이 일치하지 않습니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {
+        "hold1": 60.0
+      },
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "hold1"
+      ]
+    }
+  },
+  {
+    "id": "T092",
+    "group": "오해석·지원 밖",
+    "request": "1차 유지온도 383.15K 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {
+        "T1": 383.15
+      },
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": false,
+    "match": true,
+    "stage": "validate_request_grounding",
+    "errors": [
+      "요청의 절대온도는 K입니다. temperature_unit=K로 원래 수치를 넣거나 정확히 C로 환산하십시오."
+    ],
+    "evidence": {}
+  },
+  {
+    "id": "T093",
+    "group": "오해석·지원 밖",
+    "request": "1차 승온속도 2도/hour 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {
+        "ramp1": 2
+      },
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": false,
+    "match": true,
+    "stage": "review_request",
+    "errors": [
+      "승온속도는 °C/min 또는 °C/분으로 환산하여 명시하십시오. 다른 분모 단위는 자동 적용하지 않습니다.",
+      "ramp1: 단위를 확인해야 합니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {
+        "ramp1": 2.0
+      },
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "ramp1"
+      ]
+    }
+  },
+  {
+    "id": "T094",
+    "group": "오해석·지원 밖",
+    "request": "구리 평판 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": true,
+    "match": false,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T095",
+    "group": "오해석·지원 밖",
+    "request": "PEEK 평판 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": true,
+    "match": false,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T096",
+    "group": "오해석·지원 밖",
+    "request": "탄소섬유 구형 부품 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": true,
+    "match": false,
+    "stage": "review_request",
+    "errors": [],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T097",
+    "group": "오해석·지원 밖",
+    "request": "알루미늄 평판 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": false,
+    "match": true,
+    "stage": "validate_request_grounding",
+    "errors": [
+      "지원하지 않는 재료가 명시되었습니다. needs_clarification=true와 확인 질문을 출력하십시오."
+    ],
+    "evidence": {}
+  },
+  {
+    "id": "T098",
+    "group": "오해석·지원 밖",
+    "request": "두께 10mm, 두께 12mm 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {
+        "thickness": 10
+      },
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": false,
+    "match": true,
+    "stage": "review_request",
+    "errors": [
+      "thickness: 서로 다른 값이 함께 지정되었습니다.",
+      "thickness: 사용자 근거와 AI의 적용값이 일치하지 않습니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T099",
+    "group": "오해석·지원 밖",
+    "request": "유지시간 60분으로 계산해줘",
+    "spec": {
+      "action": "simulate_process",
+      "target": "balanced",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {
+        "hold1": 60
+      },
+      "limits_patch": {},
+      "search_variables": [],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": false,
+    "match": true,
+    "stage": "review_request",
+    "errors": [
+      "어느 변수에 적용되는지 규칙으로 확인할 수 없는 숫자가 있습니다.",
+      "hold1: 사용자 근거와 AI의 적용값이 일치하지 않습니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "simulate_process",
+      "expected_search_variables": [
+        "hold1",
+        "hold2"
+      ]
+    }
+  },
+  {
+    "id": "T100",
+    "group": "오해석·지원 밖",
+    "request": "공정시간을 최소화해줘",
+    "spec": {
+      "action": "optimize_cycle",
+      "target": "minimize_peak",
+      "material": "AS4_8552",
+      "temperature_unit": "C",
+      "condition_patch": {},
+      "limits_patch": {},
+      "search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ],
+      "needs_clarification": false,
+      "clarification_question": null
+    },
+    "expected_pass": false,
+    "actual_pass": false,
+    "match": true,
+    "stage": "review_request",
+    "errors": [
+      "target: 요청한 최적화 목표와 다릅니다."
+    ],
+    "evidence": {
+      "quantities_canonical": {},
+      "expected_action": "optimize_cycle",
+      "expected_search_variables": [
+        "ramp1",
+        "T1",
+        "hold1",
+        "ramp2",
+        "T2",
+        "hold2"
+      ]
+    }
+  }
+]

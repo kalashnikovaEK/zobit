@@ -1,0 +1,61 @@
+/workspace/scratch/531d68b35e17/CFRP_Agent_v34/app/runtime_v17.py:34: RuntimeWarning: CFRP uses Python solver: native probe exit=1; calculation may be slower.
+  warnings.warn('CFRP uses Python solver: ' + STATUS['reason'] + '; calculation may be slower.', RuntimeWarning)
+test_saved_model_optimizer_rechecks_physics (test_agent_trained_v23.TrainedOptimizerTests.test_saved_model_optimizer_rechecks_physics) ... ok
+test_bad_json_schema (test_preview_v34.PreviewTests.test_bad_json_schema) ... ok
+test_bad_number (test_preview_v34.PreviewTests.test_bad_number) ... ok
+test_bad_range (test_preview_v34.PreviewTests.test_bad_range) ... ok
+test_comma_change_fixed_scope (test_preview_v34.PreviewTests.test_comma_change_fixed_scope) ... ok
+test_confirmed_physics_result_guard (test_preview_v34.PreviewTests.test_confirmed_physics_result_guard) ... ok
+test_decimal_comma_preserved (test_preview_v34.PreviewTests.test_decimal_comma_preserved) ... ok
+test_expired (test_preview_v34.PreviewTests.test_expired) ... ok
+test_joint_comma_stages_preserved (test_preview_v34.PreviewTests.test_joint_comma_stages_preserved) ... ok
+test_negated_constraint_blocks_before_llm (test_preview_v34.PreviewTests.test_negated_constraint_blocks_before_llm) ... ok
+test_preview_no_solver_or_training (test_preview_v34.PreviewTests.test_preview_no_solver_or_training) ... ok
+test_token_bound_one_use (test_preview_v34.PreviewTests.test_token_bound_one_use) ... ok
+test_units (test_preview_v34.PreviewTests.test_units) ... ok
+test_actual_physics_preserves_unselected_conditions (test_request_v33.RequestV33Tests.test_actual_physics_preserves_unselected_conditions) ... ok
+test_bounded_retry_without_silent_correction (test_request_v33.RequestV33Tests.test_bounded_retry_without_silent_correction) ... ok
+test_converted_request_actual_simulation (test_request_v33.RequestV33Tests.test_converted_request_actual_simulation) ... ok
+test_inequality_and_wrong_scope (test_request_v33.RequestV33Tests.test_inequality_and_wrong_scope) ... ok
+test_peak_and_hold_scope (test_request_v33.RequestV33Tests.test_peak_and_hold_scope) ... ok
+test_request_specific_schema_preserves_numeric_gate (test_request_v33.RequestV33Tests.test_request_specific_schema_preserves_numeric_gate) ... ok
+test_units_and_material_confirmation (test_request_v33.RequestV33Tests.test_units_and_material_confirmation) ... ok
+test_async_agent_uses_saved_model_without_training (test_surrogate_v23.SavedModelTests.test_async_agent_uses_saved_model_without_training) ... ok
+test_corrupt_and_stale_models_blocked (test_surrogate_v23.SavedModelTests.test_corrupt_and_stale_models_blocked) ... ok
+test_missing_model_is_optional (test_surrogate_v23.SavedModelTests.test_missing_model_is_optional) ... ok
+test_prediction_and_cache (test_surrogate_v23.SavedModelTests.test_prediction_and_cache) ... ok
+test_700_optimizer_actual_physics (test_surrogate_v24.ExpandedModelTests.test_700_optimizer_actual_physics) ... ok
+test_700_prediction_actual_async_physics (test_surrogate_v24.ExpandedModelTests.test_700_prediction_actual_async_physics) ... ok
+test_700_rows_unique_groups_and_cache (test_surrogate_v24.ExpandedModelTests.test_700_rows_unique_groups_and_cache) ... ok
+test_explicit_bundle_bypasses_auto_load (test_surrogate_v24.ExpandedModelTests.test_explicit_bundle_bypasses_auto_load) ... ok
+test_integrity_and_missing (test_surrogate_v24.ExpandedModelTests.test_integrity_and_missing) ... ok
+test_async_offload (test_v17.Regression.test_async_offload) ... ok
+test_bad_options (test_v17.Regression.test_bad_options) ... ok
+test_guard_none (test_v17.Regression.test_guard_none) ... ok
+test_http_routes (test_v17.Regression.test_http_routes) ... ok
+test_integrity (test_v17.Regression.test_integrity) ... ok
+test_measured_null (test_v17.Regression.test_measured_null) ... ok
+test_missing_calculation (test_v17.Regression.test_missing_calculation) ... ok
+test_native_failure_fallback (test_v17.Regression.test_native_failure_fallback) ... /workspace/scratch/531d68b35e17/CFRP_Agent_v34/app/runtime_v17.py:34: RuntimeWarning: CFRP uses Python solver: native probe exit=-11; calculation may be slower.
+  warnings.warn('CFRP uses Python solver: ' + STATUS['reason'] + '; calculation may be slower.', RuntimeWarning)
+ok
+test_spec_grounding (test_v17.Regression.test_spec_grounding) ... ok
+test_spec_guard (test_v17.Regression.test_spec_guard) ... ok
+test_training_optimization (test_v17.Regression.test_training_optimization) ... ok
+test_windows_bootstrap_orchestration (test_v17.Regression.test_windows_bootstrap_orchestration) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 254.175s
+
+OK
+[HTML API] "GET / HTTP/1.1" 200 -
+[HTML API] "GET /api/config HTTP/1.1" 200 -
+[HTML API] "GET /api/models HTTP/1.1" 200 -
+[HTML API] "GET /chat_ui.js HTTP/1.1" 200 -
+[HTML API] "GET /workbench_v14.js HTTP/1.1" 200 -
+[HTML API] "POST /api/simulate HTTP/1.1" 200 -
+[HTML API] "POST /api/measured HTTP/1.1" 200 -
+[HTML API] "POST /api/ai/chat HTTP/1.1" 200 -
+[HTML API] "POST /api/ai/chat HTTP/1.1" 200 -
+Starting http://127.0.0.1:8765/ ; keep this console open.
+Runtime check failed. See runtime_check_v18.log.

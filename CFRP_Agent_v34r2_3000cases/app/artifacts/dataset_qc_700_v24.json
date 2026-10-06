@@ -1,0 +1,25 @@
+{
+  "requested": 700,
+  "valid": 700,
+  "original_rows": 256,
+  "new_physics_rows": 444,
+  "groups": 175,
+  "duplicate_inputs": 0,
+  "nonfinite": 0,
+  "model_hash": "721e80cd331a71eca50dcd21a69d47e2aa08493dc19d69159f3e79a839a10114",
+  "solver_options": {
+    "nz": 31,
+    "tool_nz": 21,
+    "dt": 2.0,
+    "save_seconds": 30.0
+  },
+  "original_dataset_sha256": "5218d5376af82cbe6e2420ab7d841d8093bdefe2205f9d781c59b6cafbf46c14",
+  "expanded_dataset_sha256": "97c89235a743225cb723e0673d583dacb0b0e283f64ea3a91a793d0e6658c0d4",
+  "seeds": [
+    2401,
+    2402
+  ],
+  "external_validation_passed": false,
+  "qualified": false,
+  "purpose": "development surrogate search; not experimentally qualified"
+}

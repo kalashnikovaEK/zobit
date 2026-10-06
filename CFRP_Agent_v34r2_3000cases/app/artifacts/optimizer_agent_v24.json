@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "result_guard": "passed",
+  "fit_rows": 700,
+  "physics_rechecked": 2,
+  "recommendations": 2,
+  "llm_inference": "structured request supplied",
+  "external_validation_passed": false
+}

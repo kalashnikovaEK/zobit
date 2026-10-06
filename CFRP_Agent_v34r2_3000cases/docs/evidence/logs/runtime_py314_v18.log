@@ -1,0 +1,3 @@
+Python: 3.14.7 (main, Sep 24 2026, 17:58:18) [Clang 22.1.3 ] Executable: /workspace/scratch/dbacafbd0b97/clean_v18/bin/python
+Solver backend: {'backend': 'numba', 'reason': 'isolated import/JIT probe passed', 'versions': '0.68.0 0.50.0'}
+HTML runtime imports and required files OK. Streamlit is not required.

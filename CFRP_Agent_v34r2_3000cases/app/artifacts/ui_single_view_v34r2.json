@@ -1,0 +1,15 @@
+{
+  "single_view_v34r2.cjs": "PASS v34r2: baseline-only deduplication, single-view switching, selection persistence, stale comparison rejection; physics cell mapping, ≤60 frames, cure, common comparison clock, held endpoint, measured null, playback cancellation, stale async render, WebGL fallback",
+  "viz3d_live_v20.cjs": "PASS: physics cell mapping, ≤60 frames, cure, common comparison clock, held endpoint, measured null, playback cancellation, stale async render, WebGL fallback",
+  "live_view_v19.cjs": "PASS: solver arrays → SVG; peak frame, timeline, cure, playback, invalidation, measured null\nPASS: rejected 3D render shows fallback explanation",
+  "stale_response_v17.cjs": "PASS: delayed old response discarded; button released",
+  "demo_view_v22.cjs": "PASS: six demo traces, bag/ply/material labels, per-cell temperature and cure mapping, unclipped common scale, nonuniform section at 137 min",
+  "preview_ui_v34.cjs": "PASS: preview text, explicit confirmation token, changed-input and edited-request invalidation",
+  "modified_existing_files": [
+    "app/workbench_v14.js",
+    "app/studio_ui_v22.js",
+    "app/viz3d_live_v20.js"
+  ],
+  "python_physics_model_data_unchanged": true,
+  "browser_visual_test": "not run: browser executable unavailable"
+}

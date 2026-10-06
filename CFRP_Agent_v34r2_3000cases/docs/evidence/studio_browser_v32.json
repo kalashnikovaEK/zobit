@@ -1,0 +1,13 @@
+{
+  "titleUnderline": "none",
+  "primaryColor": "rgb(40, 94, 168)",
+  "inputFont": "13px",
+  "chartFont": "Segoe UI, Malgun Gothic, sans-serif",
+  "formCount": 1,
+  "menuCount": 1,
+  "errors": [],
+  "overflow": false,
+  "menu_user_window_graph_window": "passed",
+  "api": "mocked using bundled physics fixture",
+  "plotly": "mocked; chart rendering not visually validated"
+}

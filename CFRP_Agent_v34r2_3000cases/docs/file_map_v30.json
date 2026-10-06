@@ -1,0 +1,498 @@
+[
+  {
+    "original": "AI.py",
+    "current": "app/AI.py"
+  },
+  {
+    "original": "AI_guard.py",
+    "current": "app/AI_guard.py"
+  },
+  {
+    "original": "async_runtime_v17.py",
+    "current": "app/async_runtime_v17.py"
+  },
+  {
+    "original": "AUDIT_v17.md",
+    "current": "docs/audit/AUDIT_v17.md"
+  },
+  {
+    "original": "AUDIT_v18.md",
+    "current": "docs/audit/AUDIT_v18.md"
+  },
+  {
+    "original": "AUDIT_v19.md",
+    "current": "docs/audit/AUDIT_v19.md"
+  },
+  {
+    "original": "AUDIT_v20.md",
+    "current": "docs/audit/AUDIT_v20.md"
+  },
+  {
+    "original": "chat_bridge.py",
+    "current": "app/chat_bridge.py"
+  },
+  {
+    "original": "chat_ui.js",
+    "current": "app/chat_ui.js"
+  },
+  {
+    "original": "check_html_runtime_v15.py",
+    "current": "app/check_html_runtime_v15.py"
+  },
+  {
+    "original": "collapsible_ui_v22.js",
+    "current": "app/collapsible_ui_v22.js"
+  },
+  {
+    "original": "core.py",
+    "current": "app/core.py"
+  },
+  {
+    "original": "DEBUG_REPORT_v28.md",
+    "current": "docs/audit/DEBUG_REPORT_v28.md"
+  },
+  {
+    "original": "demo_view_v22.js",
+    "current": "app/demo_view_v22.js"
+  },
+  {
+    "original": "exports_v14.py",
+    "current": "app/exports_v14.py"
+  },
+  {
+    "original": "integrated_api_v14.py",
+    "current": "app/integrated_api_v14.py"
+  },
+  {
+    "original": "integrity_v14.py",
+    "current": "app/integrity_v14.py"
+  },
+  {
+    "original": "interactive.html",
+    "current": "app/interactive.html"
+  },
+  {
+    "original": "interactive_server.py",
+    "current": "app/interactive_server.py"
+  },
+  {
+    "original": "live_view_v19.js",
+    "current": "app/live_view_v19.js"
+  },
+  {
+    "original": "llm_profiles_v14.py",
+    "current": "app/llm_profiles_v14.py"
+  },
+  {
+    "original": "measured_api_v14.py",
+    "current": "app/measured_api_v14.py"
+  },
+  {
+    "original": "measured_boundary_v11.py",
+    "current": "app/measured_boundary_v11.py"
+  },
+  {
+    "original": "menu_ui_v23.js",
+    "current": "app/menu_ui_v23.js"
+  },
+  {
+    "original": "pipeline.py",
+    "current": "app/pipeline.py"
+  },
+  {
+    "original": "README.md",
+    "current": "README.md"
+  },
+  {
+    "original": "reporting.py",
+    "current": "app/reporting.py"
+  },
+  {
+    "original": "requirements-html-v15.txt",
+    "current": "app/requirements-html-v15.txt"
+  },
+  {
+    "original": "requirements-windows-py314-v18.txt",
+    "current": "app/requirements-windows-py314-v18.txt"
+  },
+  {
+    "original": "review_store_v14.py",
+    "current": "app/review_store_v14.py"
+  },
+  {
+    "original": "runtime_v17.py",
+    "current": "app/runtime_v17.py"
+  },
+  {
+    "original": "run_html_v15_windows.bat",
+    "current": "app/run_html_v15_windows.bat"
+  },
+  {
+    "original": "setup_html_v15_windows.bat",
+    "current": "app/setup_html_v15_windows.bat"
+  },
+  {
+    "original": "SOFT_LIGHT_THEME_REPORT_v29.md",
+    "current": "docs/audit/SOFT_LIGHT_THEME_REPORT_v29.md"
+  },
+  {
+    "original": "SPLIT_VERIFICATION_v16.md",
+    "current": "docs/audit/SPLIT_VERIFICATION_v16.md"
+  },
+  {
+    "original": "stack_view_v14.js",
+    "current": "app/stack_view_v14.js"
+  },
+  {
+    "original": "START_HERE_PY314_v18.md",
+    "current": "docs/guides/START_HERE_PY314_v18.md"
+  },
+  {
+    "original": "START_HERE_v16.md",
+    "current": "docs/guides/START_HERE_v16.md"
+  },
+  {
+    "original": "START_WINDOWS.bat",
+    "current": "START_WINDOWS.bat"
+  },
+  {
+    "original": "studio_layout_v21.js",
+    "current": "app/studio_layout_v21.js"
+  },
+  {
+    "original": "studio_ui_v22.js",
+    "current": "app/studio_ui_v22.js"
+  },
+  {
+    "original": "surrogate_store_v23.py",
+    "current": "app/surrogate_store_v23.py"
+  },
+  {
+    "original": "surrogate_store_v24.py",
+    "current": "app/surrogate_store_v24.py"
+  },
+  {
+    "original": "temperature_view.js",
+    "current": "app/temperature_view.js"
+  },
+  {
+    "original": "time_surrogate.py",
+    "current": "app/time_surrogate.py"
+  },
+  {
+    "original": "TRAINING_v23.md",
+    "current": "docs/training/TRAINING_v23.md"
+  },
+  {
+    "original": "TRAINING_v24.md",
+    "current": "docs/training/TRAINING_v24.md"
+  },
+  {
+    "original": "train_physics_v23.py",
+    "current": "app/train_physics_v23.py"
+  },
+  {
+    "original": "train_physics_v24.py",
+    "current": "app/train_physics_v24.py"
+  },
+  {
+    "original": "UI_TEST_REPORT_v27.md",
+    "current": "docs/audit/UI_TEST_REPORT_v27.md"
+  },
+  {
+    "original": "viz3d_live_v20.js",
+    "current": "app/viz3d_live_v20.js"
+  },
+  {
+    "original": "web_bridge.py",
+    "current": "app/web_bridge.py"
+  },
+  {
+    "original": "windows_launcher_v17.py",
+    "current": "app/windows_launcher_v17.py"
+  },
+  {
+    "original": "workbench_v14.js",
+    "current": "app/workbench_v14.js"
+  },
+  {
+    "original": "artifacts/dataset_qc_700_v24.json",
+    "current": "app/artifacts/dataset_qc_700_v24.json"
+  },
+  {
+    "original": "artifacts/demo_transplant_v22.png",
+    "current": "docs/evidence/screenshots/demo_transplant_v22.png"
+  },
+  {
+    "original": "artifacts/demo_ui_v22.json",
+    "current": "app/artifacts/demo_ui_v22.json"
+  },
+  {
+    "original": "artifacts/development_cases.csv",
+    "current": "app/artifacts/development_cases.csv"
+  },
+  {
+    "original": "artifacts/development_cases_700_v24.csv",
+    "current": "app/artifacts/development_cases_700_v24.csv"
+  },
+  {
+    "original": "artifacts/fallback_py314_v18.log",
+    "current": "docs/evidence/logs/fallback_py314_v18.log"
+  },
+  {
+    "original": "artifacts/fallback_v17.log",
+    "current": "docs/evidence/logs/fallback_v17.log"
+  },
+  {
+    "original": "artifacts/generated_444_v24.jsonl",
+    "current": "app/artifacts/generated_444_v24.jsonl"
+  },
+  {
+    "original": "artifacts/install_py314_v18.log",
+    "current": "docs/evidence/logs/install_py314_v18.log"
+  },
+  {
+    "original": "artifacts/measured_fixture_v20.json",
+    "current": "app/artifacts/measured_fixture_v20.json"
+  },
+  {
+    "original": "artifacts/old_profile_cp314_failure_v18.log",
+    "current": "docs/evidence/logs/old_profile_cp314_failure_v18.log"
+  },
+  {
+    "original": "artifacts/optimizer_agent_v24.json",
+    "current": "app/artifacts/optimizer_agent_v24.json"
+  },
+  {
+    "original": "artifacts/physics_fixture_v20.json",
+    "current": "app/artifacts/physics_fixture_v20.json"
+  },
+  {
+    "original": "artifacts/predict_agent_v24.json",
+    "current": "app/artifacts/predict_agent_v24.json"
+  },
+  {
+    "original": "artifacts/python_label_recheck_v24.json",
+    "current": "app/artifacts/python_label_recheck_v24.json"
+  },
+  {
+    "original": "artifacts/recompute_v17.log",
+    "current": "docs/evidence/logs/recompute_v17.log"
+  },
+  {
+    "original": "artifacts/runtime_py314_v18.log",
+    "current": "docs/evidence/logs/runtime_py314_v18.log"
+  },
+  {
+    "original": "artifacts/soft_light_theme_v29.json",
+    "current": "app/artifacts/soft_light_theme_v29.json"
+  },
+  {
+    "original": "artifacts/stale_response_v17.log",
+    "current": "docs/evidence/logs/stale_response_v17.log"
+  },
+  {
+    "original": "artifacts/studio_desktop_v21.png",
+    "current": "docs/evidence/screenshots/studio_desktop_v21.png"
+  },
+  {
+    "original": "artifacts/studio_desktop_v22.png",
+    "current": "docs/evidence/screenshots/studio_desktop_v22.png"
+  },
+  {
+    "original": "artifacts/studio_mobile_v21.png",
+    "current": "docs/evidence/screenshots/studio_mobile_v21.png"
+  },
+  {
+    "original": "artifacts/studio_mobile_v22.png",
+    "current": "docs/evidence/screenshots/studio_mobile_v22.png"
+  },
+  {
+    "original": "artifacts/studio_ui_v21.json",
+    "current": "app/artifacts/studio_ui_v21.json"
+  },
+  {
+    "original": "artifacts/surrogate_speed_v23.json",
+    "current": "app/artifacts/surrogate_speed_v23.json"
+  },
+  {
+    "original": "artifacts/tests_clean_v17.log",
+    "current": "docs/evidence/logs/tests_clean_v17.log"
+  },
+  {
+    "original": "artifacts/tests_optimizer_v23.log",
+    "current": "docs/evidence/logs/tests_optimizer_v23.log"
+  },
+  {
+    "original": "artifacts/tests_py314_v18.log",
+    "current": "docs/evidence/logs/tests_py314_v18.log"
+  },
+  {
+    "original": "artifacts/tests_regression_v23.log",
+    "current": "docs/evidence/logs/tests_regression_v23.log"
+  },
+  {
+    "original": "artifacts/tests_regression_v24.log",
+    "current": "docs/evidence/logs/tests_regression_v24.log"
+  },
+  {
+    "original": "artifacts/tests_surrogate_v23.log",
+    "current": "docs/evidence/logs/tests_surrogate_v23.log"
+  },
+  {
+    "original": "artifacts/tests_surrogate_v24.log",
+    "current": "docs/evidence/logs/tests_surrogate_v24.log"
+  },
+  {
+    "original": "artifacts/tests_v17.log",
+    "current": "docs/evidence/logs/tests_v17.log"
+  },
+  {
+    "original": "artifacts/tests_v20.log",
+    "current": "docs/evidence/logs/tests_v20.log"
+  },
+  {
+    "original": "artifacts/tests_v23_compat_v24.log",
+    "current": "docs/evidence/logs/tests_v23_compat_v24.log"
+  },
+  {
+    "original": "artifacts/trained_optimizer_v23.json",
+    "current": "app/artifacts/trained_optimizer_v23.json"
+  },
+  {
+    "original": "artifacts/training_v23.log",
+    "current": "docs/evidence/logs/training_v23.log"
+  },
+  {
+    "original": "artifacts/training_v24.log",
+    "current": "docs/evidence/logs/training_v24.log"
+  },
+  {
+    "original": "artifacts/ui_smoke_result_v14.json",
+    "current": "app/artifacts/ui_smoke_result_v14.json"
+  },
+  {
+    "original": "artifacts/ui_v17.log",
+    "current": "docs/evidence/logs/ui_v17.log"
+  },
+  {
+    "original": "artifacts/ui_v27_integrity.json",
+    "current": "app/artifacts/ui_v27_integrity.json"
+  },
+  {
+    "original": "artifacts/ui_v27_tests.log",
+    "current": "docs/evidence/logs/ui_v27_tests.log"
+  },
+  {
+    "original": "artifacts/ui_v28_integrity.json",
+    "current": "app/artifacts/ui_v28_integrity.json"
+  },
+  {
+    "original": "artifacts/wheels_py314_windows_v18.log",
+    "current": "docs/evidence/logs/wheels_py314_windows_v18.log"
+  },
+  {
+    "original": "config/ai_guard_policy.json",
+    "current": "app/config/ai_guard_policy.json"
+  },
+  {
+    "original": "config/ai_ollama.json",
+    "current": "app/config/ai_ollama.json"
+  },
+  {
+    "original": "config/ai_prompt.txt",
+    "current": "app/config/ai_prompt.txt"
+  },
+  {
+    "original": "config/ai_request_schema.json",
+    "current": "app/config/ai_request_schema.json"
+  },
+  {
+    "original": "config/llm_profiles_v14.json",
+    "current": "app/config/llm_profiles_v14.json"
+  },
+  {
+    "original": "config/material.json",
+    "current": "app/config/material.json"
+  },
+  {
+    "original": "tests/demo_view_v22.cjs",
+    "current": "app/tests/demo_view_v22.cjs"
+  },
+  {
+    "original": "tests/live_view_v19.cjs",
+    "current": "app/tests/live_view_v19.cjs"
+  },
+  {
+    "original": "tests/stale_response_v17.cjs",
+    "current": "app/tests/stale_response_v17.cjs"
+  },
+  {
+    "original": "tests/test_agent_trained_v23.py",
+    "current": "app/tests/test_agent_trained_v23.py"
+  },
+  {
+    "original": "tests/test_surrogate_v23.py",
+    "current": "app/tests/test_surrogate_v23.py"
+  },
+  {
+    "original": "tests/test_surrogate_v24.py",
+    "current": "app/tests/test_surrogate_v24.py"
+  },
+  {
+    "original": "tests/test_v17.py",
+    "current": "app/tests/test_v17.py"
+  },
+  {
+    "original": "tests/viz3d_live_v20.cjs",
+    "current": "app/tests/viz3d_live_v20.cjs"
+  },
+  {
+    "original": "artifacts/trained_surrogate_v23/forest_arrays.npz",
+    "current": "app/artifacts/trained_surrogate_v23/forest_arrays.npz"
+  },
+  {
+    "original": "artifacts/trained_surrogate_v23/fresh_physics_checks.csv",
+    "current": "app/artifacts/trained_surrogate_v23/fresh_physics_checks.csv"
+  },
+  {
+    "original": "artifacts/trained_surrogate_v23/heldout_predictions.csv",
+    "current": "app/artifacts/trained_surrogate_v23/heldout_predictions.csv"
+  },
+  {
+    "original": "artifacts/trained_surrogate_v23/manifest.json",
+    "current": "app/artifacts/trained_surrogate_v23/manifest.json"
+  },
+  {
+    "original": "artifacts/trained_surrogate_v23/surrogate_metrics.json",
+    "current": "app/artifacts/trained_surrogate_v23/surrogate_metrics.json"
+  },
+  {
+    "original": "artifacts/trained_surrogate_v23/training_audit_v23.json",
+    "current": "app/artifacts/trained_surrogate_v23/training_audit_v23.json"
+  },
+  {
+    "original": "artifacts/trained_surrogate_v24/fixed_physics_benchmark_v24.csv",
+    "current": "app/artifacts/trained_surrogate_v24/fixed_physics_benchmark_v24.csv"
+  },
+  {
+    "original": "artifacts/trained_surrogate_v24/forest_arrays.npz",
+    "current": "app/artifacts/trained_surrogate_v24/forest_arrays.npz"
+  },
+  {
+    "original": "artifacts/trained_surrogate_v24/heldout_predictions.csv",
+    "current": "app/artifacts/trained_surrogate_v24/heldout_predictions.csv"
+  },
+  {
+    "original": "artifacts/trained_surrogate_v24/manifest.json",
+    "current": "app/artifacts/trained_surrogate_v24/manifest.json"
+  },
+  {
+    "original": "artifacts/trained_surrogate_v24/surrogate_metrics.json",
+    "current": "app/artifacts/trained_surrogate_v24/surrogate_metrics.json"
+  },
+  {
+    "original": "artifacts/trained_surrogate_v24/training_audit_v24.json",
+    "current": "app/artifacts/trained_surrogate_v24/training_audit_v24.json"
+  }
+]

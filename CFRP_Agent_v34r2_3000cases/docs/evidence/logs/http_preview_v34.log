@@ -1,0 +1,8 @@
+/workspace/scratch/531d68b35e17/CFRP_Agent_v34/app/runtime_v17.py:34: RuntimeWarning: CFRP uses Python solver: native probe exit=1; calculation may be slower.
+  warnings.warn('CFRP uses Python solver: ' + STATUS['reason'] + '; calculation may be slower.', RuntimeWarning)
+[HTML API] "GET /chat_ui.js HTTP/1.1" 200 -
+[HTML API] "POST /api/ai/chat HTTP/1.1" 200 -
+[HTML API] "POST /api/ai/chat HTTP/1.1" 400 -
+[HTML API] "POST /api/ai/chat HTTP/1.1" 200 -
+[HTML API] "POST /api/ai/chat HTTP/1.1" 400 -
+{'http_preview': True, 'unconfirmed_physics_calls': 0, 'changed_input_rejected': True, 'replayed_token_rejected': True, 'confirmed_physics': 'real solver', 'result_guard': 'passed', 'llm': 'mocked extraction; no actual Ollama'}

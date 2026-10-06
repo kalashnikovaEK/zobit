@@ -1,0 +1,18 @@
+{
+  "version": "v11",
+  "base_url": "http://127.0.0.1:11434",
+  "model": "gemma2",
+  "timeout_seconds": 180,
+  "json_retries": 1,
+  "temperature": 0,
+  "num_predict": 768,
+  "prompt_file": "config/ai_prompt.txt",
+  "schema_file": "config/ai_request_schema.json",
+  "candidate_count": 1000,
+  "top_k": 10,
+  "max_feedback_rounds": 2,
+  "recommendation_count": 3,
+  "default_search_variables": ["ramp1", "T1", "hold1", "ramp2", "T2", "hold2"],
+  "solver_options": {"nz": 41, "tool_nz": 21, "dt": 1.0, "save_seconds": 30.0},
+  "objective_weights": {"time": 0.6, "peak": 0.2, "spread": 0.2}
+}

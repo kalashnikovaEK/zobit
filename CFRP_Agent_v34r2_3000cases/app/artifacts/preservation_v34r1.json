@@ -1,0 +1,15 @@
+{
+  "app/core.py": true,
+  "app/config/material.json": true,
+  "app/measured_boundary_v11.py": true,
+  "app/artifacts/development_cases_3000_v24r1.csv": true,
+  "app/artifacts/trained_surrogate_v24r1/forest_arrays.npz": true,
+  "app/artifacts/trained_surrogate_v24r1/manifest.json": true,
+  "app/train_physics_v24r1.py": true,
+  "app/AI.py": true,
+  "app/AI_guard.py": true,
+  "app/request_semantics_v33.py": true,
+  "app/request_preview_v34.py": true,
+  "app/chat_ui.js": true,
+  "app/interactive.html": true
+}

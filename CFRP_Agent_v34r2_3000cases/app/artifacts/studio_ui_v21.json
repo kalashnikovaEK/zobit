@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "checks": [
+    "actual HTTP extension asset",
+    "real solver result",
+    "single visible chart in 7 views",
+    "SVG only fallback view",
+    "sidebar input/AI switch",
+    "original plot arrays match result",
+    "1440px left viewer/right input, no horizontal overflow",
+    "760px responsive layout, no horizontal overflow",
+    "input invalidation clears KPI and disables playback",
+    "toolbar executes original calculation and updates T2",
+    "AI response envelope using actual solver arrays preserves single baseline/selected view and candidate change",
+    "real measured upload displays null cycle time and updates single heatmap"
+  ],
+  "errors": [],
+  "layout": {
+    "vx": 0,
+    "sx": 1008,
+    "vwidth": 1008,
+    "swidth": 432,
+    "overflow": false
+  }
+}

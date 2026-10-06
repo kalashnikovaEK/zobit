@@ -1,0 +1,324 @@
+<!doctype html>
+<!-- [NEW v04] Interactive HTML backed by the Python physical solver. -->
+<!-- [NEW v05] Current form inputs can be exported to and restored from a JSON file. -->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CURE · Interactive Physical Model</title>
+<style>
+:root{color-scheme:dark;--bg:#08111e;--panel:#101d2f;--panel2:#13243a;--line:#29405b;--text:#e8eff8;--muted:#97a9bf;--accent:#55dfbf;--warn:#f0b35b;--bad:#ff7474}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#112540 0,#08111e 38%,#07101b 100%);color:var(--text);font:15px/1.55 system-ui,-apple-system,"Noto Sans KR",sans-serif}
+main{max-width:1500px;margin:auto;padding:28px 24px 64px}.eyebrow{color:var(--accent);letter-spacing:.16em;font-size:12px;font-weight:700}h1{font-size:38px;letter-spacing:-.055em;margin:.2rem 0 .35rem}h2{font-size:20px;margin:0 0 14px;letter-spacing:-.03em}.sub{color:var(--muted);margin:0 0 22px}.notice{border:1px solid #765e36;background:#2d2416;padding:13px 16px;border-radius:10px;margin:16px 0 20px}.layout{display:grid;grid-template-columns:380px 1fr;gap:18px;align-items:start}.card{background:rgba(16,29,47,.96);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:0 16px 40px rgba(0,0,0,.15)}.controls{position:sticky;top:14px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{display:flex;flex-direction:column;gap:5px}.field.wide{grid-column:1/-1}label{font-size:12px;color:#b8c5d6}.unit{color:#71849e;font-weight:500}input,select{width:100%;background:#081522;border:1px solid #334b67;color:var(--text);border-radius:8px;padding:9px 10px;font:inherit;outline:none}input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 2px rgba(85,223,191,.12)}details{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}summary{cursor:pointer;color:#cdd8e6;font-weight:650;margin-bottom:11px}.actions{display:flex;gap:9px;margin-top:16px}.file-actions{margin-top:9px}.file-actions button{flex:1}.file-note{color:var(--muted);font-size:11px;margin-top:7px}button{border:0;border-radius:9px;padding:11px 14px;font:inherit;font-weight:750;cursor:pointer}.primary{flex:1;background:var(--accent);color:#06111e}.secondary{background:#1a304a;color:#dce8f5}.status{margin-top:10px;font-size:12px;color:var(--muted);min-height:19px}.status.error{color:var(--bad)}.status.run{color:var(--accent)}.metrics{display:grid;grid-template-columns:repeat(6,minmax(120px,1fr));gap:10px;margin-bottom:14px}.metric{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:13px}.metric span{display:block;color:var(--muted);font-size:11px}.metric strong{display:block;font-size:23px;line-height:1.25;margin-top:4px;white-space:nowrap}.badge-row{display:flex;flex-wrap:wrap;gap:7px;margin:4px 0 15px}.badge{border:1px solid var(--line);background:#0b1928;border-radius:999px;padding:5px 9px;font-size:11px;color:#b8c7da}.badge.good{border-color:#3e8b79;color:#79e9ce}.badge.warn{border-color:#826635;color:#f0c980}.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.chart{height:390px;background:#0d1929;border:1px solid var(--line);border-radius:12px;overflow:hidden}.chart.wide{grid-column:1/-1;height:410px}.profile-tools{display:grid;grid-template-columns:1fr 130px;gap:12px;align-items:center;margin:12px 0 8px}input[type=range]{padding:0;border:0;background:transparent}.timebox{background:#0b1928;border:1px solid var(--line);border-radius:8px;padding:8px;text-align:center;font-variant-numeric:tabular-nums}.raw{font:12px/1.5 ui-monospace,monospace;color:#9fb0c5;background:#091522;border:1px solid var(--line);padding:12px;border-radius:9px;overflow:auto;max-height:210px}.footer-note{color:#73869e;font-size:12px;margin-top:16px}
+@media(max-width:1150px){.layout{grid-template-columns:1fr}.controls{position:static}.metrics{grid-template-columns:repeat(3,1fr)}}@media(max-width:760px){main{padding:20px 12px}.grid,.chart-grid{grid-template-columns:1fr}.chart.wide{grid-column:auto}.metrics{grid-template-columns:repeat(2,1fr)}h1{font-size:29px}}
+/* [NEW v19] Grid children must shrink with the viewport and Plotly SVGs. */
+.layout{grid-template-columns:380px minmax(0,1fr)}.layout>section,.card,.chart,.field{min-width:0}.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}.metric strong{font-size:21px;white-space:normal}.timebox{overflow-wrap:anywhere}.profile-tools{grid-template-columns:minmax(0,1fr) 230px}.actions{flex-wrap:wrap}.actions button{min-width:0}pre{white-space:pre-wrap;overflow-wrap:anywhere}h2{overflow-wrap:anywhere}
+@media(max-width:1150px){.layout{grid-template-columns:minmax(0,1fr)}}@media(max-width:760px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.profile-tools{grid-template-columns:minmax(0,1fr)}}
+
+/* [NEW v21] Studio workspace: one chart on the left, inputs and AI on the right. */
+body.studioV21{background:#08111e}.studioV21 main{max-width:none;padding:0;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+.studioV21 main>.eyebrow,.studioV21 main>h1,.studioV21 main>.sub,.studioV21 main>.notice{display:none}
+.studioV21 .layout{display:grid;grid-template-columns:minmax(0,7fr) minmax(330px,3fr);gap:0;flex:1;min-height:0;overflow:hidden}
+.studioV21 .studioViewerV21{grid-column:1;grid-row:1;overflow:auto;padding:20px 22px 30px;min-height:0}
+.studioV21 .studioSidebarV21{grid-column:2;grid-row:1;overflow:auto;min-height:0;padding:16px;border-left:1px solid var(--line);background:#0c1828}
+.studioV21 .controls{position:static;padding:16px;box-shadow:none}.studioV21 .studioSidebarV21>.card{margin:0 0 12px!important}
+.studioV21 [hidden]{display:none!important}.studioV21 .chart,.studioV21 .chart.wide{width:100%;height:clamp(390px,58vh,650px);grid-column:auto}
+.studioV21 .metrics{grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}.studioV21 .metric{padding:11px}.studioV21 .metric strong{font-size:18px}
+.studioToolbarV21{display:flex;align-items:center;gap:14px;padding:14px 22px;border-bottom:1px solid var(--line);background:#10243b;flex-wrap:wrap}
+.studioBrandV21{flex:1;min-width:230px}.studioBrandV21 strong{font-size:21px;letter-spacing:-.04em}.studioBrandV21 small{display:block;color:var(--muted);font-size:11px}
+.studioToolbarV21 button{padding:9px 14px}.studioToolbarV21 .primary{flex:0}.studioToolbarV21 .studioVersionV21{color:#86a9cb;font-size:12px}
+.studioTabsV21{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:14px}.studioTabsV21 button{font-size:13px;padding:10px 12px;background:#152c45;color:#abc0d7}
+.studioTabsV21 button[aria-selected=true]{background:#2676dc;color:white}.studioTabsV21 select{width:auto;max-width:100%;font-size:13px}.studioTabsV21 button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.studioHeadingV21{display:flex;justify-content:space-between;align-items:center;gap:8px}.studioHeadingV21 h2{margin:0}.studioViewNoteV21{color:var(--muted);font-size:12px;margin:8px 0 14px}
+.studioNavigationV21{display:flex;gap:8px;margin-top:14px;align-items:center}.studioNavigationV21 span{font-size:12px;color:var(--muted);margin-right:auto}
+.studioV21 #vizPanelV20,.studioV21 #liveViewV19{border:0;padding:0;box-shadow:none;background:none}.studioV21 #vizPanelV20 .chart-grid,.studioV21 #liveViewV19 .chart-grid{display:block}
+.studioV21 #vizKpiV20,.studioV21 #liveSummaryV19{display:none}.studioV21 #liveSectionV19 svg{max-height:58vh}
+.studioV21 .studioSidebarV21 h2{font-size:17px}.studioV21 .studioSidebarV21 .sub{font-size:12px;margin-bottom:12px}.studioV21 #chatHistory{max-height:250px!important}
+.studioV21 .studioSidebarV21 details>summary{font-size:13px}.studioV21 .studioSidebarV21 .grid{gap:8px}
+@media(max-width:1250px){.studioV21 .metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:900px){.studioV21 main{height:auto;overflow:visible}.studioV21 .layout{display:flex;flex-direction:column;overflow:visible}.studioV21 .studioViewerV21,.studioV21 .studioSidebarV21{overflow:visible;width:100%;padding:14px}.studioV21 .studioSidebarV21{border-left:0;border-top:1px solid var(--line)}.studioToolbarV21{padding:12px 14px}.studioV21 .chart{height:420px}}
+/* [NEW v21] Keep toolbar actions at their natural width. */
+.studioToolbarV21 .primary{flex:0 0 auto;white-space:nowrap}.studioToolbarV21 .secondary{flex:0 0 auto;white-space:nowrap}
+/* [NEW v22] Persistent right-edge page scrollbar requested for the entire window. */
+html{overflow-y:scroll;scrollbar-gutter:stable;scrollbar-color:#527799 #0b1726;scrollbar-width:auto}
+html::-webkit-scrollbar{width:14px}html::-webkit-scrollbar-track{background:#0b1726}html::-webkit-scrollbar-thumb{background:#527799;border:3px solid #0b1726;border-radius:10px}html::-webkit-scrollbar-thumb:hover{background:#79a3c9}
+.studioV21 main{height:auto;min-height:100dvh;overflow:visible}.studioV21 .layout{flex:none;overflow:visible;align-items:start}
+.studioV21 .studioViewerV21,.studioV21 .studioSidebarV21{overflow:visible;min-height:0}
+
+/* [NEW v29] Soft Light visual overrides only; geometry and interactions are preserved. */
+:root{color-scheme:light;--bg:#F5F7FA;--panel:#fff;--panel2:#F8FAFC;--line:#DCE4EE;--text:#243247;--muted:#64748B;--accent:#2563EB;--warn:#B7791F;--bad:#C94C4C}
+html body,body.studioV21{background:#F5F7FA!important;color:var(--text)}
+.card,.v20-fold,.metric,.chart,.studio-window,.user-window-v25,.menu-v23{background:#fff!important;border-color:var(--line)!important;border-radius:12px;box-shadow:0 2px 8px rgba(30,50,80,.045)!important}
+.controls{box-shadow:none!important}
+.studio-brand,.view-heading-v23,summary,label{color:var(--text)!important}
+.unit,.footer-note,.menu-note-v23,.studio-window-state{color:var(--muted)!important}
+input,select,textarea,#chatInput{background:#fff!important;color:var(--text)!important;border-color:#CBD5E1!important;border-radius:8px;accent-color:#2563EB}
+input:focus,select:focus,textarea:focus{border-color:#93B4F6!important;box-shadow:0 0 0 3px rgba(37,99,235,.10)!important;outline:none}
+input[type=range]{background:transparent!important;box-shadow:none!important}
+button.primary{background:#2563EB!important;color:#fff!important}
+button.primary:hover{background:#1D4ED8!important}
+button.secondary,.menu-toggle-v23,.side-toggle-v26,.studio-window-bar button{background:#EEF2F7!important;color:#475569!important}
+button.secondary:hover,.menu-v23 button:hover{background:#E6EDF6!important}
+button:focus-visible,summary:focus-visible{outline:2px solid #93B4F6!important;outline-offset:2px}
+.menu-v23 button{color:#475569!important}
+.menu-v23 button[aria-current=true],.studioTabsV21 button[aria-selected=true]{background:#DBEAFE!important;color:#1D4ED8!important}
+.studioTabsV21 button{background:#EEF2F7!important;color:#475569!important}
+.raw,.timebox{background:#F8FAFC!important;color:#475569!important;border-color:var(--line)!important}
+.notice{background:#FFF8EB!important;border-color:#EBD8B2!important;color:#926322}
+.badge{background:#F8FAFC!important;color:#64748B!important;border-color:var(--line)!important}
+.badge.good{background:#EFF8F2!important;color:#38825A!important;border-color:#BEDBC8!important}
+.badge.warn{background:#FFF8EB!important;color:#A36C27!important;border-color:#EBD8B2!important}
+.status.run{color:#38825A}.status.error{color:#C94C4C}
+.studio-window-bar,.user-window-v25 .user-bar-v25,.studioToolbarV21,.studioV21 .studioSidebarV21{background:#F1F5F9!important}
+.studio-window-state{border-color:var(--line)!important}
+.studio-open span{background:#EFF6FF!important;color:#2563EB!important;border-color:#CBDCF5!important}
+.studio-open:hover{box-shadow:inset 0 0 0 2px #BFDBFE!important}
+.side-handle-v26{background:#DCE4EE!important}.side-handle-v26:hover,.side-handle-v26:focus{background:#BFDBFE!important}
+#chatHistory p{background:#EFF6FF!important;color:#334155!important}#chatHistory p:nth-child(even){background:#F8FAFC!important}
+#liveViewV19 svg,.studio-window-plot>svg{background:#fff!important;border-color:var(--line)!important}
+html,*{scrollbar-color:#B5C3D5 #F5F7FA}html::-webkit-scrollbar-track{background:#F5F7FA}html::-webkit-scrollbar-thumb{background:#B5C3D5;border-color:#F5F7FA}
+
+/* [NEW v31] Engineering Light: retain layout, text, controls and events. */
+:root{--bg:#F3F4F6;--panel:#fff;--panel2:#FAFBFC;--line:#E0E4E9;--text:#29323D;--muted:#6B7280;--accent:#2563EB}
+html body,body.studioV21{background:#F3F4F6!important}
+.card,.v20-fold,.metric,.chart,.menu-v23{border-radius:6px!important;box-shadow:none!important;border-color:#E0E4E9!important}
+.studio-window,.user-window-v25{border-radius:6px!important;box-shadow:0 3px 12px rgba(25,35,50,.07)!important;border-color:#CFD5DD!important}
+input,select,textarea,#chatInput,button,.raw,.timebox,.notice,.studio-open,.studio-open span,.menu-v23 button{border-radius:4px!important}
+button{font-weight:600;box-shadow:none}
+button.secondary,.menu-toggle-v23,.side-toggle-v26,.studio-window-bar button{background:#fff!important;color:#4B5563!important;box-shadow:inset 0 0 0 1px #D5DAE1!important}
+button.secondary:hover,.menu-toggle-v23:hover,.side-toggle-v26:hover,.studio-window-bar button:hover{background:#F3F4F6!important}
+button.primary{background:#2563EB!important;color:#fff!important;box-shadow:none!important}
+button.primary:hover{background:#2159CC!important}
+button:disabled{opacity:.5}
+.menu-v23 button{background:transparent!important;font-weight:500;box-shadow:none!important}
+.menu-v23 button:hover{background:#F3F4F6!important}
+.menu-v23 button[aria-current=true],.studioTabsV21 button[aria-selected=true]{background:#EDF2FA!important;color:#344F79!important;box-shadow:inset 3px 0 0 #7190BC!important}
+input:focus,select:focus,textarea:focus{border-color:#93AACE!important;box-shadow:0 0 0 2px rgba(80,115,166,.10)!important}
+button:focus-visible,summary:focus-visible{outline-color:#93AACE!important}
+input[type=range]{box-shadow:none!important;accent-color:#6682AB}
+.studio-brand{font-weight:600!important;letter-spacing:0!important;color:#29323D!important}
+h2{font-weight:600;letter-spacing:0;text-decoration:underline;text-decoration-color:#E0E4E9;text-decoration-thickness:1px;text-underline-offset:9px}
+summary{font-weight:600!important}.v20-fold>summary:before,.v20-hint{color:#7A8697!important}
+.sub,.file-note,.footer-note,.v20-caption,.v20-status{color:#6B7280!important}
+.metric{background:#FAFBFC!important}.metric strong{font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.badge,.badge.good,.badge.warn{background:transparent!important;border-color:transparent!important;border-radius:0!important;box-shadow:none!important}
+.badge{color:#6B7280!important}.badge.good{color:#47765A!important}.badge.warn{color:#936C35!important}
+.raw,.timebox{background:#FAFBFC!important;color:#566170!important}
+.notice{background:#FCFAF5!important;color:#816A44!important;border-color:#E5DFD3!important}
+.status.run{color:#47765A}.status.error{color:#AD5555}
+.studio-window-bar,.user-window-v25 .user-bar-v25,.studioToolbarV21{background:#F5F6F8!important;color:#374151!important}
+.studio-window-title,.user-bar-v25 strong{font-weight:600}
+.studio-window-state{background:#fff;color:#6B7280!important}
+.studio-open span{background:rgba(255,255,255,.96)!important;color:#566170!important;border-color:#D5DAE1!important}
+.studio-open:hover{box-shadow:inset 0 0 0 1px #93AACE!important}
+#chatHistory p,#chatHistory p:nth-child(even){background:#F6F7F9!important;border-radius:4px!important;color:#374151!important}
+#chatHistory p:nth-child(odd){background:#EFF2F6!important}
+#liveViewV19 svg,.studio-window-plot>svg{border-radius:4px!important}
+.side-handle-v26{background:#D9DEE5!important}.side-handle-v26:hover,.side-handle-v26:focus{background:#AAB8CA!important}
+html,*{scrollbar-color:#BCC3CC #F3F4F6}html::-webkit-scrollbar-track{background:#F3F4F6}html::-webkit-scrollbar-thumb{background:#BCC3CC;border-color:#F3F4F6}html::-webkit-scrollbar-thumb:hover{background:#A5AFBC}
+
+/* [NEW v32] Workbench visual hierarchy, consistent controls and chart typography. */
+body{font-family:"Segoe UI","Malgun Gothic",system-ui,sans-serif;font-size:14px;line-height:1.5}
+h2{font-size:15px!important;line-height:1.4;font-weight:600;text-decoration:none!important;letter-spacing:-.015em}
+.view-heading-v23{font-size:17px!important;color:#243347!important;font-weight:600;box-shadow:0 1px 0 #DCE2EA;padding-bottom:10px}
+.view-v23>.card>h2{color:#536174!important;font-size:13px!important}
+.studio-brand{background:#fff;box-shadow:0 1px 0 #DCE2EA;border-radius:4px;min-height:40px;padding:6px 10px!important;font-size:15px!important}
+.studio-tools{color:#758195!important;font-size:12px}
+.card{border-color:#E0E5EC!important}.chart{border-color:#E6EAF0!important;border-radius:3px!important}
+.v20-fold>summary{background:#F6F8FB;border-bottom:1px solid transparent;padding:12px 14px!important}
+.v20-fold[open]>summary{border-bottom-color:#E3E8EF}
+.v20-title strong{font-size:14px!important;font-weight:600!important;color:#2B3A50}
+.v20-caption,.v20-status{font-size:11px!important;line-height:1.5;color:#68778D!important}
+.v20-body{padding-top:12px}.v20-hint{font-size:11px!important;color:#64748B!important}
+label{font-size:12px!important;font-weight:500;color:#536174!important}.unit{font-weight:400;color:#8590A0!important}
+input:not([type=range]):not([type=file]),select,textarea,#chatInput{font-size:13px!important;line-height:1.4;border-color:#CCD5E0!important;box-shadow:none;font-variant-numeric:tabular-nums}
+input:not([type=range]):not([type=file]),select{min-height:34px;padding:7px 9px}
+input::placeholder,textarea::placeholder{color:#8994A5;opacity:1}
+button{font-size:13px!important;line-height:1.4!important;font-weight:500!important;transition:background-color .12s,border-color .12s}
+.actions button{min-height:34px;padding:8px 12px!important}
+.studio-tools button,.side-toggle-v26,.menu-toggle-v23{min-height:28px;padding:5px 9px!important;font-size:12px!important}
+.studio-window-bar button,.user-bar-v25 button{min-height:26px;padding:4px 8px!important;font-size:12px!important}
+button.primary{font-weight:600!important;background:#285EA8!important}button.primary:hover{background:#214F8F!important}
+button.secondary{box-shadow:inset 0 0 0 1px #CCD5E0!important}
+.menu-v23{border-radius:5px!important;box-shadow:0 4px 14px rgba(30,45,65,.08)!important}
+.menu-v23 summary{font-size:12px!important;color:#79869A!important;font-weight:600}
+.menu-v23 button{font-size:13px!important;border-radius:3px!important}
+.menu-v23 button[aria-current=true]{background:#EAF0F8!important;color:#244B7E!important;box-shadow:inset 3px 0 0 #426FA4!important}
+.metric{background:#fff!important;border-radius:4px!important;box-shadow:inset 0 2px 0 #E4EAF1!important}
+.metric span{font-size:11px;color:#758195}.metric strong{font-size:20px!important;line-height:1.3;color:#293B53;font-weight:600;letter-spacing:-.025em}
+.badge{background:#F2F5F8!important;border-color:#E4E9F0!important;border-radius:3px!important;font-size:11px}
+.badge.good{background:#F1F7F3!important;border-color:#D9E8DD!important;color:#3C6C4D!important}
+.badge.warn{background:#FAF6EE!important;border-color:#EBE1CF!important;color:#8A642F!important}
+.raw{background:#F7F9FC!important;color:#59697E!important;font-family:Consolas,"Malgun Gothic",monospace;font-size:11px;line-height:1.6;border-color:#E3E8F0!important}
+.timebox{background:#F5F8FC!important;color:#425770!important;font-size:12px;border-color:#DFE6F0!important}
+.sub{font-size:12px;line-height:1.65;color:#6C7B90!important}.file-note,.footer-note{font-size:11px;line-height:1.6}
+.studio-window-bar,.user-bar-v25{background:#F2F5F9!important;box-shadow:0 1px 0 #DCE3ED}
+.studio-window-state{font-size:11px;color:#77869B!important;background:#FAFBFD}
+.studio-open span{font-size:11px;line-height:1.4;background:#F8FAFD!important;box-shadow:0 1px 3px rgba(35,55,80,.05)}
+#liveViewV19 svg text,.studio-window-plot>svg text{font-family:"Segoe UI","Malgun Gothic",sans-serif;font-size:12px;fill:#536174}
+.js-plotly-plot .modebar{background:rgba(255,255,255,.92)!important;border-radius:3px}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
+</style>
+</head>
+<body>
+<main>
+<div class="eyebrow">CURE / CFRP PROCESS LAB · HTML PHYSICS BRIDGE v05</div>
+<h1>값을 입력하면 물리모델이 다시 계산한다.</h1>
+<p class="sub">HTML 입력 → Python <code>core.simulate()</code> → AS4/8552 + Invar 10 mm 1D 열·경화 계산 → 결과 시각화</p>
+<div class="notice"><strong>범위:</strong> 이 화면은 실제 Python 물리 solver를 호출한다. 브라우저 자체에서 수식을 흉내 내지 않는다. 외부 실험 검증은 아직 완료되지 않았으며 실제 제조 적합성 판정 도구가 아니다.</div>
+<div class="layout">
+<section class="card controls">
+<h2>공정 입력</h2>
+<form id="simForm">
+<div class="grid">
+<div class="field"><label for="ramp1">1차 승온 <span class="unit">°C/min</span></label><input id="ramp1" name="ramp1" type="number" step="0.1" value="2"></div>
+<div class="field"><label for="T1">1차 온도 <span class="unit">°C</span></label><input id="T1" name="T1" type="number" step="0.5" value="110"></div>
+<div class="field"><label for="hold1">1차 유지 <span class="unit">min</span></label><input id="hold1" name="hold1" type="number" step="1" value="60"></div>
+<div class="field"><label for="ramp2">2차 승온 <span class="unit">°C/min</span></label><input id="ramp2" name="ramp2" type="number" step="0.1" value="2"></div>
+<div class="field"><label for="T2">2차 온도 <span class="unit">°C</span></label><input id="T2" name="T2" type="number" step="0.5" value="180"></div>
+<div class="field"><label for="hold2">2차 유지 <span class="unit">min</span></label><input id="hold2" name="hold2" type="number" step="1" value="120"></div>
+<div class="field wide"><label for="thickness">CFRP 두께 <span class="unit">mm</span></label><input id="thickness" name="thickness" type="number" step="0.1" value="10"></div>
+</div>
+<details>
+<summary>고급 열경계 입력</summary>
+<div class="grid">
+<div class="field"><label for="tool_thickness_mm">Invar 두께 <span class="unit">mm</span></label><input id="tool_thickness_mm" type="number" step="0.5" value="10"></div>
+<div class="field"><label for="h_top">상면 대류 h <span class="unit">W/(m²·K)</span></label><input id="h_top" type="number" step="0.1" value="85.2"></div>
+<div class="field wide"><label for="contact_h">복합재–금형 접촉 h <span class="unit">W/(m²·K)</span></label><input id="contact_h" type="number" step="100" value="100000"></div>
+<div class="field wide"><label for="contact_h_cooldown">냉각기 접촉 h <span class="unit">빈칸 = 동일값</span></label><input id="contact_h_cooldown" type="number" step="100" placeholder="미지정"></div>
+<div class="field"><label for="tool_outer_bc">금형 외면 경계</label><select id="tool_outer_bc"><option value="prescribed">Prescribed</option><option value="convective">Convective</option><option value="adiabatic">Adiabatic</option></select></div>
+<div class="field"><label for="tool_outer_h">금형 외면 h <span class="unit">W/(m²·K)</span></label><input id="tool_outer_h" type="number" step="0.1" value="85.2"></div>
+<div class="field"><label for="cool_rate">냉각속도 <span class="unit">°C/min</span></label><input id="cool_rate" type="number" step="0.1" value="3"></div>
+<div class="field"><label for="release_temperature_c">종료/탈형 온도 <span class="unit">°C</span></label><input id="release_temperature_c" type="number" step="1" value="60"></div>
+</div>
+</details>
+<details>
+<summary>내부 시연 제약값</summary>
+<div class="grid">
+<div class="field"><label for="limit_Tmax">Tmax 상한 <span class="unit">°C</span></label><input id="limit_Tmax" type="number" step="1" value="195"></div>
+<div class="field"><label for="limit_delta">ΔTmax 상한 <span class="unit">°C</span></label><input id="limit_delta" type="number" step="1" value="20"></div>
+<div class="field wide"><label for="limit_doc">최소 최종 경화도</label><input id="limit_doc" type="number" step="0.01" value="0.90"></div>
+</div>
+</details>
+<div class="actions"><button class="primary" type="submit" id="runBtn">물리모델 계산</button><button class="secondary" type="button" id="resetBtn">기본값</button></div>
+<!-- [NEW v05] Save/restore the editable form state only; calculated results are regenerated by the solver. -->
+<div class="actions file-actions"><button class="secondary" type="button" id="saveJsonBtn">입력 JSON 저장</button><button class="secondary" type="button" id="loadJsonBtn">JSON 불러오기</button></div>
+<input id="jsonFileInput" type="file" accept="application/json,.json" hidden>
+<div class="file-note">공정·경계·제약 입력값만 저장한다. 불러오면 물리모델을 다시 계산해 시각화를 갱신한다.</div>
+<div id="status" class="status">서버 연결 확인 중…</div>
+</form>
+</section>
+<section>
+<div class="metrics">
+<div class="metric"><span>최고 내부온도</span><strong id="mTmax">—</strong></div>
+<div class="metric"><span>최대 온도편차</span><strong id="mDelta">—</strong></div>
+<div class="metric"><span>최저 최종 경화도</span><strong id="mDoc">—</strong></div>
+<div class="metric"><span>냉각 포함 공정시간</span><strong id="mTime">—</strong></div>
+<div class="metric"><span>금형 최고온도</span><strong id="mTool">—</strong></div>
+<div class="metric"><span>최대 접촉면 ΔT</span><strong id="mInterface">—</strong></div>
+</div>
+<div class="badge-row" id="badges"></div>
+<div class="card">
+<h2>온도·경화 이력</h2>
+<div class="chart-grid">
+<div id="tempChart" class="chart wide"></div>
+<div id="cureChart" class="chart"></div>
+<div id="contactChart" class="chart"></div>
+</div>
+<h2 style="margin-top:18px">선택 시점의 두께방향 단면</h2>
+<div class="profile-tools"><input id="timeSlider" type="range" min="0" max="1" step="1" value="0"><div class="timebox" id="timeLabel">0.0 min</div></div>
+<div id="profileChart" class="chart wide"></div>
+<h2 style="margin-top:18px">CFRP 두께방향 온도장</h2>
+<div id="heatmapChart" class="chart wide"></div>
+<details><summary>계산에 실제 사용된 값</summary><pre id="raw" class="raw"></pre></details>
+<div class="footer-note">공정지표는 금형이 아니라 복합재 영역에서 계산한다. 접촉계수 10⁵ W/(m²·K)는 Li 2020의 good-contact 비교조건이며 보편 실측값이 아니다.</div>
+</div>
+</section>
+</div>
+</main>
+<script>
+// [NEW v04] Browser UI calls the real Python solver through the local API.
+const API_BASE = location.protocol.startsWith('http') ? location.origin : 'http://127.0.0.1:8765';
+let latest=null;
+const $=id=>document.getElementById(id);
+const plotCfg={responsive:true,displaylogo:false,scrollZoom:true};
+// [NEW v29] Light chart presentation; axes and data remain unchanged.
+// [NEW v32] Shared chart font and restrained categorical palette; data and axes unchanged.
+const layoutBase={paper_bgcolor:'#ffffff',plot_bgcolor:'#ffffff',font:{color:'#536174',family:'Segoe UI, Malgun Gothic, sans-serif',size:12},colorway:['#64748B','#4277B7','#38825A','#9A75B5','#B7791F','#5F9CA5'],margin:{l:58,r:22,t:35,b:50},legend:{orientation:'h',y:1.14,font:{size:11}},xaxis:{gridcolor:'#E8EDF4'},yaxis:{gridcolor:'#E8EDF4'}};
+
+function loadPlotly(){return new Promise((resolve,reject)=>{if(window.Plotly)return resolve();const s=document.createElement('script');s.src=API_BASE+'/plotly.min.js';s.onload=resolve;s.onerror=()=>reject(new Error('Plotly 로드 실패 — interactive_server.py 실행 상태를 확인하십시오.'));document.head.appendChild(s);});}
+function num(id){const v=$(id).value;if(v==='')return null;const x=Number(v);if(!Number.isFinite(x))throw new Error(id+' 입력값이 숫자가 아닙니다.');return x;}
+function payload(){return {condition:{ramp1:num('ramp1'),T1:num('T1'),hold1:num('hold1'),ramp2:num('ramp2'),T2:num('T2'),hold2:num('hold2'),thickness:num('thickness')},options:{tool_thickness_mm:num('tool_thickness_mm'),h_top:num('h_top'),contact_h:num('contact_h'),contact_h_cooldown:num('contact_h_cooldown'),tool_outer_bc:$('tool_outer_bc').value,tool_outer_h:num('tool_outer_h'),cool_rate:num('cool_rate'),release_temperature_c:num('release_temperature_c')},limits:{Tmax:num('limit_Tmax'),delta_Tmax:num('limit_delta'),final_DoC:num('limit_doc')}}}
+
+// [NEW v05] Portable JSON input-state persistence. No calculated result is trusted from the file.
+const INPUT_JSON_SCHEMA='cfrp-agent-html-input';
+const INPUT_JSON_SCHEMA_VERSION=1;
+const CONDITION_IDS=['ramp1','T1','hold1','ramp2','T2','hold2','thickness'];
+const OPTION_IDS=['tool_thickness_mm','h_top','contact_h','contact_h_cooldown','tool_outer_bc','tool_outer_h','cool_rate','release_temperature_c'];
+const LIMIT_IDS={Tmax:'limit_Tmax',delta_Tmax:'limit_delta',final_DoC:'limit_doc'};
+function currentInputDocument(){const p=payload();return {schema:INPUT_JSON_SCHEMA,schema_version:INPUT_JSON_SCHEMA_VERSION,saved_at:new Date().toISOString(),condition:p.condition,options:p.options,limits:p.limits};}
+function safeFilenameTime(){return new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z$/,'Z').replace('T','_');}
+function saveInputsJSON(){try{const doc=currentInputDocument();const blob=new Blob([JSON.stringify(doc,null,2)+'\n'],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='cfrp_inputs_'+safeFilenameTime()+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),0);setStatus('현재 입력값을 JSON으로 저장했습니다.','run')}catch(e){setStatus('JSON 저장 실패: '+e.message,'error')}}
+function finiteLoadedNumber(value,name,allowNull=false){if(value===null&&allowNull)return null;if(typeof value!=='number'||!Number.isFinite(value))throw new Error(name+' 값은 '+(allowNull?'숫자 또는 null':'유한한 숫자')+'여야 합니다.');return value;}
+function validateInputDocument(doc){if(!doc||typeof doc!=='object'||Array.isArray(doc))throw new Error('JSON 최상위 값은 객체여야 합니다.');if(doc.schema!==undefined&&doc.schema!==INPUT_JSON_SCHEMA)throw new Error('지원하지 않는 입력 JSON schema입니다.');if(doc.schema_version!==undefined&&doc.schema_version!==INPUT_JSON_SCHEMA_VERSION)throw new Error('지원하지 않는 입력 JSON schema_version입니다.');for(const section of ['condition','options','limits'])if(!doc[section]||typeof doc[section]!=='object'||Array.isArray(doc[section]))throw new Error(section+' 섹션이 없습니다.');for(const k of CONDITION_IDS){if(!(k in doc.condition))throw new Error('condition.'+k+' 값이 없습니다.');finiteLoadedNumber(doc.condition[k],'condition.'+k)}for(const k of OPTION_IDS){if(!(k in doc.options))throw new Error('options.'+k+' 값이 없습니다.');if(k==='tool_outer_bc'){if(!['prescribed','convective','adiabatic'].includes(doc.options[k]))throw new Error('options.tool_outer_bc 값이 올바르지 않습니다.')}else finiteLoadedNumber(doc.options[k],'options.'+k,k==='contact_h_cooldown')}for(const k of Object.keys(LIMIT_IDS)){if(!(k in doc.limits))throw new Error('limits.'+k+' 값이 없습니다.');finiteLoadedNumber(doc.limits[k],'limits.'+k)}return doc;}
+function applyInputDocument(doc){doc=validateInputDocument(doc);for(const k of CONDITION_IDS)$(k).value=doc.condition[k];for(const k of OPTION_IDS){const v=doc.options[k];$(k).value=v===null?'':v}for(const [k,id] of Object.entries(LIMIT_IDS))$(id).value=doc.limits[k];}
+async function loadInputsJSON(file){try{if(!file)throw new Error('JSON 파일이 선택되지 않았습니다.');const text=await file.text();let doc;try{doc=JSON.parse(text)}catch(_){throw new Error('JSON 문법을 읽을 수 없습니다.')}applyInputDocument(doc);setStatus('JSON 입력값 불러오기 완료 · 물리모델 재계산 중…','run');await run()}catch(e){setStatus('JSON 불러오기 실패: '+e.message,'error')}finally{$('jsonFileInput').value=''}}
+function setStatus(text,kind=''){const el=$('status');el.textContent=text;el.className='status '+kind}
+function metric(id,value,digits,unit=''){ /* [NEW v14] Unobserved release is not zero minutes. */ if(value===null||value===undefined){$(id).textContent='—';return;} $(id).textContent=Number(value).toFixed(digits)+(unit?' '+unit:''); }
+function badge(text,kind=''){const x=document.createElement('span');x.className='badge '+kind;x.textContent=text;return x}
+// [NEW v07] Never leave a previous successful calculation looking current after inputs change or a new request fails.
+// [NEW v14] A generation counter invalidates in-flight manual work too.
+let runGenerationV14=0,activeManualRunV14=null;
+function invalidateResults(message='입력값이 변경되었습니다. 다시 계산하십시오.'){
+// [NEW v14] Extra visualization and review are invalidated together.
+if(window.clearTemperatureView)window.clearTemperatureView();if(window.invalidateReviewV14)window.invalidateReviewV14();
+runGenerationV14++;latest=null;for(const id of ['mTmax','mDelta','mDoc','mTime','mTool','mInterface'])$(id).textContent='—';const b=$('badges');b.innerHTML='';b.appendChild(badge('이전 계산결과 무효','warn'));$('raw').textContent='현재 입력값으로 다시 계산해야 합니다.';if(window.Plotly)for(const id of ['tempChart','cureChart','contactChart','profileChart','heatmapChart'])Plotly.purge(id);setStatus(message,'error')}
+function transpose(a){return a[0].map((_,i)=>a.map(r=>r[i]));}
+function nearestIndex(a,x){let best=0,err=Infinity;for(let i=0;i<a.length;i++){const e=Math.abs(a[i]-x);if(e<err){err=e;best=i}}return best}
+
+function renderSummary(r){const s=r.summary;metric('mTmax',s.Tmax,2,'°C');metric('mDelta',s.delta_Tmax,2,'°C');metric('mDoc',s.final_DoC,4);metric('mTime',s.cycle_time,1,'min');metric('mTool',s.tool_Tmax,2,'°C');metric('mInterface',s.interface_delta_Tmax,3,'°C');
+ const b=$('badges');b.innerHTML='';b.appendChild(badge(r.decision.label,r.decision.feasible?'good':'warn'));b.appendChild(badge('물리모델: '+r.model_version));b.appendChild(badge(r.external_validation_passed?'외부 실험 검증 완료':'외부 실험 검증 미완료','warn'));if(r.outside_training_domain.length)b.appendChild(badge('AI 학습범위 밖: '+r.outside_training_domain.join(', '),'warn'));else b.appendChild(badge('AI 학습범위 내부','good'));
+ $('raw').textContent=JSON.stringify({condition:r.condition,options:r.options,summary:r.summary,decision:r.decision,physics_status:r.physics_status,model_hash:r.model_hash},null,2);
+}
+function renderCharts(r){const s=r.series,t=s.t;
+// [NEW v20] Independent viewer receives only the currently published physics result.
+if(window.renderViz3DLiveV20)window.renderViz3DLiveV20(r);
+// [NEW v19] Always-visible SVG preview uses the same verified arrays as Plotly.
+if(window.updateLiveViewV19)window.updateLiveViewV19(r);
+// [NEW v14] Synchronize the extension after the original charts finish.
+if(window.updateTemperatureView)setTimeout(()=>{if(latest===r)window.updateTemperatureView(r,Number($('timeSlider').value));},0);
+
+ Plotly.react('tempChart',[
+  {x:t,y:s.T_air,name:'Autoclave air',mode:'lines',line:{dash:'dash'}},{x:t,y:s.T_part_top_surface,name:'CFRP top surface',mode:'lines'},{x:t,y:s.T_part_center,name:'CFRP center',mode:'lines'},{x:t,y:s.T_part_bottom_surface,name:'CFRP bottom surface',mode:'lines'},{x:t,y:s.T_tool_interface_surface,name:'Invar interface',mode:'lines'},{x:t,y:s.T_tool_outer_surface,name:'Invar outer',mode:'lines',line:{dash:'dot'}}],{...layoutBase,title:{text:'온도 이력',font:{size:15}},xaxis:{...layoutBase.xaxis,title:'시간 [min]'},yaxis:{...layoutBase.yaxis,title:'온도 [°C]'}},plotCfg);
+ Plotly.react('cureChart',[
+  {x:t,y:s.alpha_top_cell,name:'상면 인접 셀',mode:'lines'},{x:t,y:s.alpha_center_cell,name:'중앙 셀',mode:'lines'},{x:t,y:s.alpha_bottom_cell,name:'금형측 셀',mode:'lines'},{x:t,y:s.alpha_min,name:'최저 경화도',mode:'lines',line:{dash:'dash'}}],{...layoutBase,title:{text:'경화도 이력',font:{size:15}},xaxis:{...layoutBase.xaxis,title:'시간 [min]'},yaxis:{...layoutBase.yaxis,title:'Degree of cure',range:[0,1]}},plotCfg);
+ Plotly.react('contactChart',[{x:t,y:s.q_contact,name:'q contact',mode:'lines'}],{...layoutBase,title:{text:'복합재 → 금형 접촉 열유속',font:{size:15}},xaxis:{...layoutBase.xaxis,title:'시간 [min]'},yaxis:{...layoutBase.yaxis,title:'q″ [W/m²]'}},plotCfg);
+ const slider=$('timeSlider');slider.min=0;slider.max=t.length-1;slider.step=1;slider.value=nearestIndex(t,r.summary.peak_time);renderProfile(r,Number(slider.value));
+ Plotly.react('heatmapChart',[{x:t,y:r.field.z_part,z:transpose(r.field.T_part),type:'heatmap',colorscale:'Cividis',colorbar:{title:'°C'}}],{...layoutBase,title:{text:'CFRP 온도장',font:{size:15}},xaxis:{...layoutBase.xaxis,title:'시간 [min]'},yaxis:{...layoutBase.yaxis,title:'CFRP 두께 위치 [mm]'}},plotCfg);
+// [NEW v21] Apply layout sizing only after existing result charts are updated.
+if(window.refreshStudioLayoutV21)window.refreshStudioLayoutV21();
+}
+function renderProfile(r,i){i=Math.max(0,Math.min(r.series.t.length-1,i));
+// [NEW v19] Keep both inspectors on the same stored frame.
+if(window.moveLiveViewV19)window.moveLiveViewV19(r,i);const tp=r.field.T_part[i],tt=r.field.T_tool[i];$('timeLabel').textContent=r.series.t[i].toFixed(1)+' min';
+ Plotly.react('profileChart',[
+ {x:tp,y:r.field.z_part,name:'CFRP temperature',mode:'lines+markers'},{x:tt,y:r.field.z_tool,name:'Invar temperature',mode:'lines+markers'},{x:r.field.alpha_part[i],y:r.field.z_part,name:'CFRP cure α',mode:'lines',xaxis:'x2'}],{...layoutBase,title:{text:'두께방향 온도 + 경화도',font:{size:15}},xaxis:{...layoutBase.xaxis,title:'온도 [°C]',domain:[0,.74]},xaxis2:{title:'경화도 α',overlaying:'x',side:'top',range:[0,1],domain:[0,.74],showgrid:false},yaxis:{...layoutBase.yaxis,title:'상면 기준 깊이 [mm]',autorange:'reversed'},shapes:[{type:'line',x0:0,x1:1,xref:'paper',y0:r.condition.thickness,y1:r.condition.thickness,line:{dash:'dash',width:1}}],annotations:[{xref:'paper',yref:'y',x:.98,y:r.condition.thickness,text:'CFRP / Invar',showarrow:false,yshift:-10}]},plotCfg);
+// [NEW v21] Preserve readable labels after moving the shared time slider.
+if(window.refreshStudioLayoutV21)window.refreshStudioLayoutV21();
+}
+// [NEW v14] Response may be published only for the current unchanged input snapshot.
+async function run(){let token=null,snapshot=null;try{if(window.clearCandidatesV14)window.clearCandidatesV14();$('runBtn').disabled=true;invalidateResults('새 입력으로 계산 중…');token=runGenerationV14;activeManualRunV14=token;snapshot=JSON.stringify(payload());setStatus('물리모델 계산 중…','run');const res=await fetch(API_BASE+'/api/simulate',{method:'POST',headers:{'Content-Type':'application/json'},body:snapshot});const body=await res.json();if(token!==runGenerationV14||snapshot!==JSON.stringify(payload()))return;if(!res.ok||!body.ok)throw new Error(body.error||'계산 실패');latest=body.data;renderSummary(latest);renderCharts(latest);setStatus('계산 완료 · 현재 입력값의 물리 계산 결과입니다.','run')}catch(e){if(token===runGenerationV14)setStatus('계산 실패 · 이전 결과는 무효 처리됨: '+e.message,'error')}finally{if(activeManualRunV14===token){activeManualRunV14=null;$('runBtn').disabled=false}}}
+async function loadDefaults(){try{const res=await fetch(API_BASE+'/api/config');const body=await res.json();if(!body.ok)throw new Error(body.error);const c=body.data;for(const [k,v] of Object.entries(c.defaults))if($(k))$(k).value=v;for(const [k,v] of Object.entries(c.solver_defaults)){if(!$(k))continue;$(k).value=v===null?'':v}for(const [k,v] of Object.entries(c.limits)){const id=k==='delta_Tmax'?'limit_delta':k==='final_DoC'?'limit_doc':'limit_Tmax';$(id).value=v}setStatus('서버 연결됨 · 기본값 로드 완료','run')}catch(e){setStatus('서버 연결 실패: '+e.message,'error')}}
+$('simForm').addEventListener('submit',e=>{e.preventDefault();run()});$('resetBtn').addEventListener('click',async()=>{await loadDefaults();run()});$('timeSlider').addEventListener('input',e=>{if(latest)renderProfile(latest,Number(e.target.value))});
+// [NEW v07] Manual form edits immediately invalidate the displayed result, matching the Streamlit dirty-input behavior.
+$('simForm').querySelectorAll('input:not(#jsonFileInput),select').forEach(el=>{const eventName=el.tagName==='SELECT'?'change':'input';el.addEventListener(eventName,()=>invalidateResults())});
+// [NEW v05] JSON file save/load controls.
+$('saveJsonBtn').addEventListener('click',saveInputsJSON);$('loadJsonBtn').addEventListener('click',()=>$('jsonFileInput').click());$('jsonFileInput').addEventListener('change',e=>loadInputsJSON(e.target.files&&e.target.files[0]));
+(async()=>{try{await loadPlotly();await loadDefaults();await run()}catch(e){setStatus(e.message,'error')}})();
+</script>
+<!-- [NEW v14] Ordered extension loading retains original page functions. -->
+<script>
+(async()=>{for(const name of ['stack_view_v14.js','temperature_view.js','chat_ui.js','workbench_v14.js','live_view_v19.js','demo_view_v22.js','viz3d_live_v20.js','collapsible_ui_v22.js','studio_layout_v21.js','studio_ui_v22.js','menu_ui_v23.js' /* [NEW v27] Current menu, windows and adjustable sidebar. */ /* [NEW v22] Load demo before frame construction. */] /* [NEW v21] Single-view studio layout. */) /* [NEW v20] */await new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=API_BASE+'/'+name;s.onload=resolve;s.onerror=()=>reject(new Error(name+' 로드 실패'));document.body.appendChild(s);});})().catch(e=>setStatus(e.message,'error'));
+</script>
+</body>
+</html>

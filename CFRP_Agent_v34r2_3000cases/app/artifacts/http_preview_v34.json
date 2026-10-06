@@ -1,0 +1,9 @@
+{
+  "http_preview": true,
+  "unconfirmed_physics_calls": 0,
+  "changed_input_rejected": true,
+  "replayed_token_rejected": true,
+  "confirmed_physics": "real solver",
+  "result_guard": "passed",
+  "llm": "mocked extraction; no actual Ollama"
+}

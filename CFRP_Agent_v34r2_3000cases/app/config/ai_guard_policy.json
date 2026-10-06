@@ -1,0 +1,18 @@
+{
+  "version": "v12",
+  "aliases": {
+    "Tmax": ["최고온도", "최대온도", "Tmax", "T_limit"],
+    "delta_Tmax": ["온도편차", "온도차", "delta_Tmax"],
+    "final_DoC": ["최종경화도", "최소경화도", "경화도", "final_DoC"],
+    "thickness": ["두께", "thickness"],
+    "ramp1": ["1차승온속도", "1차승온", "ramp1"],
+    "ramp2": ["2차승온속도", "2차승온", "ramp2"],
+    "T1": ["1차유지온도", "1차온도", "T1"],
+    "T2": ["2차유지온도", "2차온도", "T2"],
+    "hold1": ["1차유지시간", "hold1"],
+    "hold2": ["2차유지시간", "hold2"]
+  },
+  "unsupported_pattern": "알루미늄|alumin(?:um|ium)|강철|steel|티타늄|titanium|유리섬유|원통|곡면|°F|℉|화씨|압력|bar|psi",
+  "complex_pattern": "말고|아니라|제외|하지마|하지않|변경하지|고정|설비|파일삭제|명령실행|적당|알아서|대충|제약완화",
+  "max_request_length": 4000
+}
